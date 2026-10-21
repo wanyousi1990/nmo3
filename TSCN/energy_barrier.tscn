@@ -1,0 +1,34 @@
+[gd_scene load_steps=5 format=3 uid="uid://bb2thxtsteqip"]
+
+[ext_resource type="Script" uid="uid://ceu11ut324tci" path="res://GD/energy_barrier.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dassphfsly2yy" path="res://TRES/radial_light_texture.tres" id="2_light"]
+[ext_resource type="Texture2D" uid="uid://bhuin4s5ieeef" path="res://ART/OTHER/energy_barrier_game.png" id="3_barrier"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_body"]
+size = Vector2(18, 257)
+
+[node name="EnergyBarrier" type="Node2D"]
+script = ExtResource("1_script")
+flicker_enabled = false
+flicker_speed = 1.0
+flicker_min_ratio = 0.6
+flicker_max_ratio = 1.1
+flicker_random = 0.0
+
+[node name="BarrierSprite" type="Sprite2D" parent="."]
+texture = ExtResource("3_barrier")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(0.95, 2.35)
+color = Color(1, 0.54902, 0.85098, 1)
+energy = 0.3
+texture = ExtResource("2_light")
+texture_scale = 1.25
+
+[node name="BarrierBody" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BarrierBody"]
+position = Vector2(-6, -7.5)
+shape = SubResource("RectangleShape2D_body")

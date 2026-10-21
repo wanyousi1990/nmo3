@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtnr5fpqlv8t4"]
+
+[ext_resource type="Script" uid="uid://c6ksyqkjh6h7" path="res://GD/GlobalState.gd" id="1_ya1et"]
+[ext_resource type="AudioStream" uid="uid://bbaw0ngg2tw6x" path="res://MUSIC/GOODMUSIC02.ogg" id="2_ya1et"]
+
+[node name="GlobalState" type="Node2D"]
+script = ExtResource("1_ya1et")
+default_start_scene = "res://TSCN/sandbox.tscn"
+bgm_stream = ExtResource("2_ya1et")
+bgm_volume = 0.5
+debug_sync_inspector_to_runtime = true
+corner_toast_font_size = 24
+corner_toast_extra_offset = Vector2(-8, 0)
+shirt_open_flash_peak_alpha = 0.25
+shirt_open_flash_fade_in = 0.1
+shirt_open_flash_fade_out = 0.2

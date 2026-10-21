@@ -1,0 +1,142 @@
+extends CharacterBody2D
+
+# ==============================================================================
+# Monster_SideScroller_Logic (V2.7 - 執著追逐版)
+# 職責：
+#   1. Chase_area: 遠距離偵測。即便玩家在 H 模式，依然會持續追逐。
+#   2. Detection_area: 近距離接觸。僅在玩家非 H 模式且非無敵時觸發劇場。
+# ==============================================================================
+
+@export_group("H-Event Settings")
+@export var h_pose_tag: String = "H_Pose_01"  # 此怪物對應的姿勢名稱
+
+@export_group("Movement")
+@export var speed: float = 60.0
+@export var chase_speed: float = 90.0        # 追逐時的速度
+@export var gravity: float = 980.0
+@export var patrol_limit: Vector2 = Vector2(-150, 150)
+
+@export_group("Detection Zones")
+@export var Chase_area: Area2D                # 遠距離：觸發追逐
+@export var Detection_area: Area2D            # 近距離：觸發 H 模式
+
+# 內部狀態
+enum State { PATROL, CHASE, HIDDEN, COOLDOWN }
+var current_state = State.PATROL
+var spawn_pos: Vector2
+var direction: int = 1
+var target_player: CharacterBody2D = null
+
+func _ready():
+	spawn_pos = global_position
+	add_to_group("Monster")
+	
+	if Chase_area:
+		Chase_area.body_entered.connect(_on_chase_entered)
+		Chase_area.body_exited.connect(_on_chase_exited)
+	
+	if Detection_area:
+		Detection_area.body_entered.connect(_on_detection_body_entered)
+
+func _physics_process(delta: float):
+	if current_state == State.HIDDEN:
+		return 
+
+	if not is_on_floor():
+		velocity.y += gravity * delta
+
+	match current_state:
+		State.PATROL:
+			_handle_patrol()
+		State.CHASE:
+			_handle_chase()
+		State.COOLDOWN:
+			velocity.x = move_toward(velocity.x, 0, speed)
+
+	move_and_slide()
+	
+	# 如果撞到牆壁或其他怪物(Mask 2)，則轉向
+	if is_on_wall():
+		_reverse_direction()
+
+func _handle_patrol():
+	if direction > 0 and global_position.x > spawn_pos.x + patrol_limit.y:
+		_reverse_direction()
+	elif direction < 0 and global_position.x < spawn_pos.x + patrol_limit.x:
+		_reverse_direction()
+		
+	velocity.x = direction * speed
+	_update_sprite_direction()
+
+func _handle_chase():
+	if not is_instance_valid(target_player):
+		current_state = State.PATROL
+		return
+	
+	# --- 核心修改：移除 H 模式不追的限制 ---
+	# 我們不再檢查 is_player_busy，這會讓怪物即便看到玩家正在 H 也會圍過去
+	
+	var dist_x = target_player.global_position.x - global_position.x
+	
+	# 增加一個小的停止距離，避免怪物完全重疊在玩家中心 (看起來像圍觀)
+	if abs(dist_x) > 10.0:
+		direction = sign(dist_x)
+		velocity.x = direction * chase_speed
+	else:
+		velocity.x = move_toward(velocity.x, 0, speed)
+	
+	_update_sprite_direction()
+
+func _reverse_direction():
+	direction *= -1
+	global_position.x += direction * 2.0 
+
+func _update_sprite_direction():
+	if has_node("Visaul"):
+		$Visaul.scale.x = abs($Visaul.scale.x) * direction
+
+# --- 遠距離追逐 ---
+
+func _on_chase_entered(body: Node2D):
+	if body.is_in_group("Player"):
+		target_player = body
+		if current_state == State.PATROL:
+			current_state = State.CHASE
+			print("目標進入視野，開始尾隨")
+
+func _on_chase_exited(body: Node2D):
+	if body == target_player:
+		target_player = null
+		if current_state == State.CHASE:
+			current_state = State.PATROL
+			print("目標失蹤，恢復巡邏")
+
+# --- 近距離觸發 ---
+
+func _on_detection_body_entered(body: Node2D):
+	if body.is_in_group("Player"):
+		# 只有自己不是處於隱藏或冷卻時才判斷
+		if current_state == State.PATROL or current_state == State.CHASE:
+			# 這裡才是「防止多重 H」的關鍵：檢查玩家是否已經在忙
+			var is_player_busy = body.get("is_in_h_mode") == true or (body.has_method("is_invincible") and body.is_invincible())
+			
+			if not is_player_busy:
+				_trigger_player_h(body)
+			else:
+				print("玩家正忙或無敵中，僅在旁圍觀")
+
+func _trigger_player_h(player: CharacterBody2D):
+	current_state = State.HIDDEN
+	self.visible = false 
+	
+	if player.has_method("start_h_event"):
+		player.start_h_event(self, h_pose_tag)
+
+# 由外部喚醒
+func reactivate_monster():
+	self.visible = true
+	current_state = State.COOLDOWN
+	
+	await get_tree().create_timer(3.0).timeout
+	if current_state == State.COOLDOWN:
+		current_state = State.PATROL

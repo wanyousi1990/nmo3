@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://cvk262celpjim"]
+
+[ext_resource type="Script" uid="uid://odxnspbt8bag" path="res://GD/Change_clothes.gd" id="1_u7ecl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4oct"]
+size = Vector2(53.0625, 134)
+
+[node name="Change_clothes" type="Area2D"]
+script = ExtResource("1_u7ecl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_c4oct")

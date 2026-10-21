@@ -1,0 +1,37 @@
+---
+description: 美術管線（Krita 圖層 → PNG → 組進現有 .tscn）
+alwaysApply: false
+globs: ART/**,TSCN/**,TOOLS/art_pipeline/**
+---
+
+# 美術管線規則
+
+工具在 `TOOLS/art_pipeline/`。第三款重畫時走這條，不要再手動建一堆 Sprite2D 節點。用法見 `DOCS/美術管線怎麼用.md`。
+
+## 圖層命名（Krita 與 PNG 檔名相同，不含副檔名）
+
+格式：`{部件}_{狀態}`，必要時加左右。
+
+部件：`Torso` `Pelvis` `Hip_L` `Hip_R` `Thigh_L` `Thigh_R` `Calf_L` `Calf_R` `Arm_L` `Arm_R` `Forearm_L` `Forearm_R` `Breast_L` `Breast_R` `Head` `HairFront` `HairBack` `Pussy` `Eye` `Mouth`
+
+狀態：`Naked` `Clothed` `Bra` `ShirtOpen` `Lewd` `Iku` `Overlay`
+
+範例：`Torso_Naked`、`Breast_L_Bra`、`Head_Eye_Half`
+
+- 畫布建議 192×192，角色高約 144px。同一姿勢所有圖層同一畫布、同一 pivot，不要各自裁切。
+- 參考層、底稿層名稱加前綴 `_`（例如 `_ref`），匯出時會跳過。
+- 左右肢體預設可 `flip_h` 鏡像；只有當左右真的不對稱才各畫一張。
+
+## 流程
+
+1. Godot 開 `TSCN/art_pipeline_tool.tscn`：選場景、載入、點選 visual 根（`Normal_Visual`／`H_Pose_*`／怪物 `Visaul`）、選 PNG 資料夾。
+2. 可選：掃描寫規格 JSON（檔名對照）。沒畫完的 Naked **不要刪節點**。
+3. Krita 圖層名＝`krita_layer`。只匯出已畫的層。
+4. 預覽組裝 → 確認 → 正式組裝。有匯出的 PNG 才改對應 Sprite；其餘維持原圖。
+5. 組裝**只換貼圖**，不重排 position／z_index。
+
+## Agent 注意
+
+- 不要為了管線去重構 `OL_H_Controller.gd` 或現有 H_POSE 邏輯。
+- 正式組裝前先輸出到 `TOOLS/art_pipeline/_preview/`，使用者確認後才寫進 `TSCN/` 與 `ART/`。
+- 規格 JSON 裡標了 `"fill": true` 的欄位是給使用者填的；沒填就不要猜正式美術內容。

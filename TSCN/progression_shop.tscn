@@ -1,0 +1,913 @@
+[gd_scene load_steps=13 format=3 uid="uid://dwgj1egg4xbqb"]
+
+[ext_resource type="Script" uid="uid://ul72g4sf83pn" path="res://GD/progression_shop.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://c82ig0rtj130x" path="res://ART/OTHER/HP_Heal.png" id="2_4y8s1"]
+[ext_resource type="Texture2D" uid="uid://jar0ljle8sto" path="res://ART/OTHER/HP+.png" id="2_iwcdt"]
+[ext_resource type="Texture2D" uid="uid://c75o5osh21hrw" path="res://ART/OTHER/HP_HealBig.png" id="3_i3btx"]
+[ext_resource type="Texture2D" uid="uid://casbc6fd1m3hr" path="res://ART/OTHER/Horny+.png" id="3_woo2x"]
+[ext_resource type="Texture2D" uid="uid://s2umfbouemx0" path="res://ART/OTHER/Semen+.png" id="4_1bnyq"]
+[ext_resource type="Texture2D" uid="uid://6ofuvmtt302c" path="res://ART/OTHER/Horny_Heal.png" id="4_c70lu"]
+[ext_resource type="Texture2D" uid="uid://ca4xt48sxdpxq" path="res://ART/OTHER/Inmon_small.png" id="5_2b7j7"]
+[ext_resource type="Texture2D" uid="uid://d1ldsjodesaax" path="res://ART/OTHER/Horny_HealBig.png" id="5_5m6a4"]
+[ext_resource type="Texture2D" uid="uid://bl7c6rbuf7s17" path="res://ART/OTHER/Tits_Fuck1.png" id="6_2b7j7"]
+[ext_resource type="Texture2D" uid="uid://ccwf1gb76etql" path="res://ART/OTHER/Tits_Fuck2.png" id="7_tetfs"]
+[ext_resource type="Texture2D" uid="uid://bhqlqvtmi1ab3" path="res://ART/OTHER/Tits_Fuck3.png" id="8_5d6q7"]
+
+[node name="ProgressionShop" type="CanvasLayer"]
+layer = 126
+script = ExtResource("1_script")
+cool_horny_small = 25.0
+cool_horny_large = 60.0
+cost_heal_hp_s = 10.0
+cost_heal_hp_l = 20.0
+cost_cool_horny_s = 10.0
+cost_cool_horny_l = 20.0
+hp_values = Array[float]([5.0, 5.0, 10.0, 10.0, 10.0, 10.0, 15.0, 15.0, 20.0])
+hp_costs = Array[float]([30.0, 30.0, 60.0, 60.0, 60.0, 80.0, 120.0, 140.0, 200.0])
+horny_values = Array[float]([5.0, 5.0, 10.0, 10.0, 10.0, 10.0, 15.0, 15.0, 20.0])
+horny_costs = Array[float]([20.0, 20.0, 40.0, 40.0, 40.0, 50.0, 75.0, 90.0, 120.0])
+semen_values = Array[float]([15.0, 15.0, 15.0, 20.0, 20.0, 20.0, 25.0, 30.0, 40.0])
+semen_costs = Array[float]([15.0, 30.0, 30.0, 60.0, 60.0, 80.0, 100.0, 120.0, 160.0])
+cost_lewd_state = 100.0
+cost_paizuri_2 = 160.0
+cost_paizuri_3 = 200.0
+selection_fill_color = Color(0.549733, 0.1995, 0.95, 0.207843)
+bought_bg_color = Color(0.2475, 0.55, 0.27775, 0.207843)
+paused_overlay_alpha = 0.5
+
+[node name="DimRect" type="ColorRect" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0.08, 0.06, 0.12, 0.72)
+
+[node name="ShopRoot" type="MarginContainer" parent="."]
+unique_name_in_owner = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 0
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 96
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 8
+
+[node name="MainVBox" type="VBoxContainer" parent="ShopRoot"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="ContentHBox" type="HBoxContainer" parent="ShopRoot/MainVBox"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 16
+
+[node name="LeftColumn" type="VBoxContainer" parent="ShopRoot/MainVBox/ContentHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_constants/separation = 6
+
+[node name="ShopScroll" type="ScrollContainer" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+vertical_scroll_mode = 2
+
+[node name="RowsVBox" type="VBoxContainer" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 0
+theme_override_constants/separation = 6
+
+[node name="Row0" type="HBoxContainer" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="HealHpS" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row0"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row0/HealHpS"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_4y8s1")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="HealHpL" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row0"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row0/HealHpL"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_i3btx")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CoolHornyS" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row0"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row0/CoolHornyS"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_c70lu")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="CoolHornyL" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row0"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row0/CoolHornyL"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_5m6a4")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Row1" type="HBoxContainer" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Hp1" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row1/Hp1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_iwcdt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Hp2" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row1/Hp2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_iwcdt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Hp3" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row1/Hp3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_iwcdt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Hp4" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row1/Hp4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_iwcdt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Hp5" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row1/Hp5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_iwcdt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Hp6" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row1/Hp6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_iwcdt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Hp7" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row1/Hp7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_iwcdt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Hp8" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row1/Hp8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_iwcdt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Hp9" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row1"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row1/Hp9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_iwcdt")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Row2" type="HBoxContainer" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Horny1" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row2/Horny1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_woo2x")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Horny2" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row2/Horny2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_woo2x")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Horny3" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row2/Horny3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_woo2x")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Horny4" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row2/Horny4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_woo2x")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Horny5" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row2/Horny5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_woo2x")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Horny6" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row2/Horny6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_woo2x")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Horny7" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row2/Horny7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_woo2x")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Horny8" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row2/Horny8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_woo2x")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Horny9" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row2"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row2/Horny9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_woo2x")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Row3" type="HBoxContainer" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox"]
+layout_mode = 2
+theme_override_constants/separation = 4
+
+[node name="Semen1" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row3/Semen1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_1bnyq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Semen2" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row3/Semen2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_1bnyq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Semen3" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row3/Semen3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_1bnyq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Semen4" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row3/Semen4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_1bnyq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Semen5" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row3/Semen5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_1bnyq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Semen6" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row3/Semen6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_1bnyq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Semen7" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row3/Semen7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_1bnyq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Semen8" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row3/Semen8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_1bnyq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Semen9" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row3"]
+custom_minimum_size = Vector2(48, 48)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row3/Semen9"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_1bnyq")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Row4" type="HBoxContainer" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="SlotLewd" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row4"]
+custom_minimum_size = Vector2(56, 56)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row4/SlotLewd"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_2b7j7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SlotLewdPlus" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row4"]
+custom_minimum_size = Vector2(56, 56)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row4/SlotLewdPlus"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("5_2b7j7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Row5" type="HBoxContainer" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox"]
+layout_mode = 2
+theme_override_constants/separation = 6
+
+[node name="SlotPaizuri1" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row5"]
+custom_minimum_size = Vector2(56, 56)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row5/SlotPaizuri1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_2b7j7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SlotPaizuri2" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row5"]
+custom_minimum_size = Vector2(56, 56)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row5/SlotPaizuri2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_tetfs")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="SlotPaizuri3" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row5"]
+custom_minimum_size = Vector2(56, 56)
+layout_mode = 2
+
+[node name="ItemTexture" type="TextureRect" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/ShopScroll/RowsVBox/Row5/SlotPaizuri3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = 2.0
+offset_right = -2.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_5d6q7")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="RowExit" type="HBoxContainer" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn"]
+layout_mode = 2
+theme_override_constants/separation = 6
+alignment = 1
+
+[node name="ExitShopPanel" type="Panel" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/RowExit"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(220, 36)
+layout_mode = 2
+
+[node name="ExitLabel" type="Label" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn/RowExit/ExitShopPanel"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Exit Shop"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HintLabel" type="Label" parent="ShopRoot/MainVBox/ContentHBox/LeftColumn"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Arrow keys to select | Z to confirm | Bottom row: Exit Shop"
+
+[node name="InfoPanel" type="PanelContainer" parent="ShopRoot/MainVBox/ContentHBox"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="InfoLabel" type="Label" parent="ShopRoot/MainVBox/ContentHBox/InfoPanel"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 120)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "（商品說明）"
+autowrap_mode = 3
+
+[node name="ConfirmRoot" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="DimConfirm" type="ColorRect" parent="ConfirmRoot"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 0.45)
+
+[node name="Panel" type="Panel" parent="ConfirmRoot"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -88.0
+offset_right = 200.0
+offset_bottom = 88.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBox" type="VBoxContainer" parent="ConfirmRoot/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 20.0
+offset_top = 16.0
+offset_right = -20.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 12
+
+[node name="ConfirmTitle" type="Label" parent="ConfirmRoot/Panel/VBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Confirm purchase?"
+autowrap_mode = 3
+
+[node name="HBox" type="HBoxContainer" parent="ConfirmRoot/Panel/VBox"]
+layout_mode = 2
+theme_override_constants/separation = 48
+alignment = 1
+
+[node name="ConfirmYesLabel" type="Label" parent="ConfirmRoot/Panel/VBox/HBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "YES"
+horizontal_alignment = 1
+
+[node name="ConfirmNoLabel" type="Label" parent="ConfirmRoot/Panel/VBox/HBox"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "NO"
+horizontal_alignment = 1
+
+[node name="ConfirmHint" type="Label" parent="ConfirmRoot/Panel/VBox"]
+layout_mode = 2
+text = "Arrow keys: YES/NO | Z to confirm"
+horizontal_alignment = 1

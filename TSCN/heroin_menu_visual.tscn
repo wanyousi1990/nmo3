@@ -1,0 +1,135 @@
+[gd_scene load_steps=16 format=3 uid="uid://dk0prohq30ei3"]
+
+[ext_resource type="Script" uid="uid://c8qm4n2k7vxhw" path="res://GD/heroin_menu_visual.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://cedyylekqfsy4" path="res://ART/OL_LARGE/OL_LAY_OK1-6.png" id="2_vvq6d"]
+[ext_resource type="Texture2D" uid="uid://b8abqjnorpvug" path="res://ART/OL_LARGE/OL_LAY_OK1-3.png" id="3_3ftp0"]
+[ext_resource type="Texture2D" uid="uid://h2o8ne78ggls" path="res://ART/OL_LARGE/OL_LAY_OK2-6.png" id="3_nmaty"]
+[ext_resource type="Texture2D" uid="uid://nhnca616v32j" path="res://ART/OL_LARGE/OL_LAY_OK2-4.png" id="4_6w3mj"]
+[ext_resource type="Texture2D" uid="uid://ccmtfc80fqs0" path="res://ART/OL_LARGE/OL_LAY_OK2-3.png" id="5_4uwng"]
+[ext_resource type="Texture2D" uid="uid://4rrwiyfvuju6" path="res://ART/OL_LARGE/OL_LAY_OK1-5.png" id="7_rm87w"]
+[ext_resource type="Texture2D" uid="uid://dou5plc08xw7l" path="res://ART/OL_LARGE/OL_LAY_OK1-4.png" id="8_28yr2"]
+[ext_resource type="Texture2D" uid="uid://b1es6ihwg5sag" path="res://ART/OL_LARGE/OL_LAY_OK1-4B.png" id="9_isrci"]
+[ext_resource type="Texture2D" uid="uid://cu3o6tv0haqcb" path="res://ART/OL_LARGE/OL_LAY_OK2-5.png" id="9_nmaty"]
+[ext_resource type="Texture2D" uid="uid://d001cqq7fyd4o" path="res://ART/OL_LARGE/OL_LAY_OK1-4C.png" id="10_wrrbn"]
+[ext_resource type="Texture2D" uid="uid://cow1wieerdjhh" path="res://ART/OL_LARGE/OL_LAY_OK2-5B.png" id="12_v1klx"]
+[ext_resource type="Texture2D" uid="uid://bt3voga0f8k1f" path="res://ART/OL_LARGE/OL_LAY_OK2-5C.png" id="13_j08pn"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_kj1e6"]
+frames = 4
+frame_0/texture = ExtResource("8_28yr2")
+frame_0/duration = 5.45
+frame_1/texture = ExtResource("9_isrci")
+frame_1/duration = 0.05
+frame_2/texture = ExtResource("10_wrrbn")
+frame_2/duration = 0.05
+frame_3/texture = ExtResource("9_isrci")
+frame_3/duration = 0.05
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_bvofb"]
+frames = 4
+frame_0/texture = ExtResource("9_nmaty")
+frame_0/duration = 5.2
+frame_1/texture = ExtResource("12_v1klx")
+frame_1/duration = 0.1
+frame_2/texture = ExtResource("13_j08pn")
+frame_2/duration = 0.1
+frame_3/texture = ExtResource("12_v1klx")
+frame_3/duration = 0.2
+
+[node name="HeroinMenuVisual" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_script")
+visual_scale = 2.0
+torso_vertical_amplitude_px = 0.8
+torso_lateral_amplitude_px = 0.2
+breast_scale_y_amplitude = 0.03
+breast_scale_x_compensate = 0.02
+torso_vertical_amplitude_px_cleared = 1.2
+torso_lateral_amplitude_px_cleared = 0.4
+breast_scale_y_amplitude_cleared = 0.05
+breast_scale_x_compensate_cleared = 0.04
+breast_secondary_jiggle_freq_cleared = 3.0
+breast_secondary_jiggle_amp_px_cleared = 0.65
+breast_follow_damping_cleared = 6.5
+pussy_pulse_scale_mult_cleared = 1.3
+pussy_pulse_hold_sec_cleared = 0.15
+pussy_pulse_release_sec_cleared = 0.25
+pussy_pulse_scale_mult = 1.0
+pussy_pulse_hold_sec = 0.12
+pussy_pulse_release_sec = 0.25
+
+[node name="VisualAnchor" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -213.0
+offset_right = -213.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="VisualRoot" type="Node2D" parent="VisualAnchor"]
+position = Vector2(960, 880)
+
+[node name="BODY" type="Node2D" parent="VisualAnchor/VisualRoot"]
+
+[node name="NotCleared" type="Sprite2D" parent="VisualAnchor/VisualRoot/BODY"]
+z_index = 2
+texture = ExtResource("2_vvq6d")
+
+[node name="Cleared" type="Sprite2D" parent="VisualAnchor/VisualRoot/BODY"]
+visible = false
+z_index = 2
+texture = ExtResource("3_nmaty")
+
+[node name="PUSSY" type="Node2D" parent="VisualAnchor/VisualRoot/BODY"]
+position = Vector2(-15, 44)
+
+[node name="NotCleared" type="Sprite2D" parent="VisualAnchor/VisualRoot/BODY/PUSSY"]
+z_index = 3
+position = Vector2(15, -44)
+texture = ExtResource("4_6w3mj")
+
+[node name="Cleared" type="Sprite2D" parent="VisualAnchor/VisualRoot/BODY/PUSSY"]
+visible = false
+z_index = 3
+position = Vector2(15, -44)
+texture = ExtResource("4_6w3mj")
+
+[node name="TORSO" type="Node2D" parent="VisualAnchor/VisualRoot/BODY"]
+position = Vector2(-45, 0)
+
+[node name="BREAST" type="Node2D" parent="VisualAnchor/VisualRoot/BODY/TORSO"]
+position = Vector2(6, -24)
+
+[node name="NotCleared" type="Sprite2D" parent="VisualAnchor/VisualRoot/BODY/TORSO/BREAST"]
+position = Vector2(39, 24)
+texture = ExtResource("3_3ftp0")
+
+[node name="Cleared" type="Sprite2D" parent="VisualAnchor/VisualRoot/BODY/TORSO/BREAST"]
+visible = false
+position = Vector2(39, 24)
+texture = ExtResource("5_4uwng")
+
+[node name="TORSO_Sprite2D" type="Sprite2D" parent="VisualAnchor/VisualRoot/BODY/TORSO"]
+z_index = 1
+position = Vector2(45, 0)
+texture = ExtResource("7_rm87w")
+
+[node name="HEAD" type="Node2D" parent="VisualAnchor/VisualRoot/BODY"]
+
+[node name="NotCleared" type="Sprite2D" parent="VisualAnchor/VisualRoot/BODY/HEAD"]
+texture = SubResource("AnimatedTexture_kj1e6")
+
+[node name="Cleared" type="Sprite2D" parent="VisualAnchor/VisualRoot/BODY/HEAD"]
+visible = false
+texture = SubResource("AnimatedTexture_bvofb")

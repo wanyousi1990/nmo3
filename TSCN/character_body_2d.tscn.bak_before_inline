@@ -1,0 +1,729 @@
+[gd_scene load_steps=74 format=3 uid="uid://d7jtq1lvsgew"]
+
+[ext_resource type="Texture2D" uid="uid://daw7b44wnvcom" path="res://ART/OL/OL-10.png.png" id="1_76bt2"]
+[ext_resource type="Script" uid="uid://cdo3e7p6uupwj" path="res://GD/character_body_2d.gd" id="1_sxias"]
+[ext_resource type="Texture2D" uid="uid://b01wdkih6i88u" path="res://ART/OL/OL-12.png.png" id="2_ucfvk"]
+[ext_resource type="Script" uid="uid://d3au2yprtpkc2" path="res://GD/visuals_manager.gd" id="3_2dyae"]
+[ext_resource type="Texture2D" uid="uid://npmwiaj5hb3m" path="res://ART/OL/OL-14.png.png" id="4_2dyae"]
+[ext_resource type="Texture2D" uid="uid://bc5wun1ljxq4m" path="res://ART/OL/OL-9.png.png" id="5_2u5n8"]
+[ext_resource type="Texture2D" uid="uid://csn5wjfs2pdd8" path="res://ART/OL/OL-34.png.png" id="5_uw63b"]
+[ext_resource type="Texture2D" uid="uid://cfeayxiag7huh" path="res://ART/OL/OL-13.png.png" id="6_73nau"]
+[ext_resource type="Texture2D" uid="uid://cg6gagx803ksl" path="res://ART/OL/OL-29.png.png" id="7_05yte"]
+[ext_resource type="Texture2D" uid="uid://cbr30mjm5foja" path="res://ART/OL/OL-21.png.png" id="7_skrk8"]
+[ext_resource type="Texture2D" uid="uid://cm5vquvmds5c6" path="res://ART/OL/OL-26.png.png" id="8_xkkvp"]
+[ext_resource type="Texture2D" uid="uid://dcegl25fcnmi3" path="res://ART/OL/OL-22.png.png" id="8_ye16i"]
+[ext_resource type="Texture2D" uid="uid://dc0wx20mx2bqc" path="res://ART/OL/OL-25.png.png" id="9_6svqw"]
+[ext_resource type="Texture2D" uid="uid://c3srm0t2shigh" path="res://ART/OL/OL-7.png.png" id="9_75u2t"]
+[ext_resource type="Texture2D" uid="uid://b4xggu70lje8l" path="res://ART/OL/OL-6.png.png" id="10_7qa1u"]
+[ext_resource type="Texture2D" uid="uid://brv3mhnigfv2m" path="res://ART/OL/OL-23.png.png" id="11_2u5n8"]
+[ext_resource type="Texture2D" uid="uid://c1qxhflhk8rtp" path="res://ART/OL/OL-19.png.png" id="11_8gu1l"]
+[ext_resource type="Texture2D" uid="uid://lqa0q3yrd1vy" path="res://ART/OL/OL-24.png.png" id="12_j3p37"]
+[ext_resource type="Texture2D" uid="uid://b0viyoox0cqa0" path="res://ART/OL/OL-17.png.png" id="12_jsgy1"]
+[ext_resource type="Texture2D" uid="uid://qetc83n05lol" path="res://ART/OL/OL-40.png.png" id="13_4urqc"]
+[ext_resource type="Texture2D" uid="uid://dvg76omftdt3v" path="res://ART/OL/OL-18.png.png" id="13_el80s"]
+[ext_resource type="Texture2D" uid="uid://dgjncs2arpstf" path="res://ART/OL/OL-20.png.png" id="14_oxcm1"]
+[ext_resource type="Resource" uid="uid://dkkq3sa2tmbl7" path="res://TRES/horny_bra_reveal.tres" id="15_3gqhh"]
+[ext_resource type="Texture2D" uid="uid://b3crqqcpqx0p3" path="res://ART/OL/OL-16.png.png" id="15_ltww1"]
+[ext_resource type="Texture2D" uid="uid://bxv2lm7vxn0nw" path="res://ART/OL/OL-39-2.png.png" id="15_vlvg8"]
+[ext_resource type="Texture2D" uid="uid://dyxfottopvye1" path="res://ART/OL/OL-15.png.png" id="16_a7mna"]
+[ext_resource type="Texture2D" uid="uid://b2x1v7l6navid" path="res://ART/OL/OL-27.png.png" id="16_j6lyf"]
+[ext_resource type="Texture2D" uid="uid://xobs2cpcvbdr" path="res://ART/OL/OL-5.png.png" id="17_lmwkj"]
+[ext_resource type="Resource" uid="uid://bxemsoxrasp0h" path="res://TRES/horny_shirt_open.tres" id="17_tsxmm"]
+[ext_resource type="Texture2D" uid="uid://d1mw53l854r72" path="res://ART/OL/OL-28.png.png" id="18_j2xv7"]
+[ext_resource type="Texture2D" uid="uid://bpdhwamgft7j8" path="res://ART/OL/OL-41.png.png" id="19_3jukq"]
+[ext_resource type="Texture2D" uid="uid://cvdgubhjvo0al" path="res://ART/OL/OL-38.png.png" id="20_130kv"]
+[ext_resource type="Texture2D" uid="uid://d3x1c4pmycswq" path="res://ART/OL/OL-37.png.png" id="22_d1cqh"]
+[ext_resource type="Script" uid="uid://c2bxfuk65s0wl" path="res://GD/OL_H_Controller.gd" id="23_ltww1"]
+[ext_resource type="Texture2D" uid="uid://bo4xb4e8qb4f1" path="res://ART/OL/OL-35.png.png" id="24_a340w"]
+[ext_resource type="Texture2D" uid="uid://bble0mj3jyd14" path="res://ART/OL/OL-36.png.png" id="26_nw78w"]
+[ext_resource type="Texture2D" uid="uid://bg51q4j5eeu4p" path="res://ART/OL/OL-30.png.png" id="28_dpyh0"]
+[ext_resource type="Texture2D" uid="uid://l6pdpea5x48" path="res://ART/OL/OL-31.png.png" id="30_gmgjv"]
+[ext_resource type="Texture2D" uid="uid://6hqn7gj65hwf" path="res://ART/OL/OL-32.png.png" id="32_1c55x"]
+[ext_resource type="Texture2D" uid="uid://c5yblbvymfkih" path="res://ART/OL/OL-33.png.png" id="34_x6jt5"]
+[ext_resource type="PackedScene" uid="uid://ba4ygklcsufvc" path="res://TSCN/h_pose_01.tscn" id="36_qaysv"]
+[ext_resource type="PackedScene" uid="uid://b84moue3afwx7" path="res://TSCN/h_pose_02.tscn" id="37_cub0u"]
+[ext_resource type="PackedScene" uid="uid://3cemho7cd0yq" path="res://TSCN/h_pose_03.tscn" id="38_7q7am"]
+[ext_resource type="PackedScene" uid="uid://d5b8v10wu6fn" path="res://TSCN/h_pose_04.tscn" id="39_vlvg8"]
+[ext_resource type="PackedScene" uid="uid://dpykoxg45w83d" path="res://TSCN/h_pose_05.tscn" id="40_hpose5"]
+[ext_resource type="Texture2D" uid="uid://dpmit7qvcm3y1" path="res://ART/OL_Dash/OL_Dash_Pelvis_Naked.png" id="43_psomw"]
+[ext_resource type="Texture2D" uid="uid://btrim3itwg2fr" path="res://ART/OL_Dash/OL_Dash_Pelvis_ShirtOpen.png" id="45_f80l7"]
+[ext_resource type="Texture2D" uid="uid://wpe3laq1b5en" path="res://ART/OL_Dash/OL_Dash_Hip_Naked.png" id="45_wu88h"]
+[ext_resource type="PackedScene" uid="uid://cti6foimvsaal" path="res://TSCN/h_pose_06.tscn" id="46_dugmk"]
+[ext_resource type="PackedScene" uid="uid://bxefy7os7pf1b" path="res://TSCN/TITS_FCUK_01.tscn" id="46_mwvrg"]
+[ext_resource type="PackedScene" uid="uid://jq5is4ik7vw0" path="res://TSCN/TITS_FUCK_02.tscn" id="47_tits02"]
+[ext_resource type="Texture2D" uid="uid://bita7ffgrindw" path="res://ART/OL_Dash/OL_Dash_Breast_L_Naked.png" id="47_u02g3"]
+[ext_resource type="PackedScene" uid="uid://4h3bfbh7ql74" path="res://TSCN/TITS_FUCK_03.tscn" id="48_tits03"]
+[ext_resource type="Texture2D" uid="uid://jpf3d58yom3y" path="res://ART/OL_Dash/OL_Dash_Breast_R_Naked.png" id="49_f80l7"]
+[ext_resource type="Texture2D" uid="uid://bpb28j3sup11x" path="res://ART/OL_Dash/OL_Dash_Breast_L_Bra.png" id="50_e864g"]
+[ext_resource type="Texture2D" uid="uid://cvowjdc05ykyx" path="res://ART/OL_Dash/OL_Dash_Breast_R_Bra.png" id="53_a2xmm"]
+[ext_resource type="Texture2D" uid="uid://bsien7xebwlri" path="res://ART/OTHER/left_arrow.png" id="91_4xbfp"]
+[ext_resource type="Texture2D" uid="uid://mtga1h8egp0u" path="res://ART/OTHER/right_arrow.png" id="92_uhyxe"]
+[ext_resource type="AudioStream" uid="uid://ds86ydlln42n6" path="res://SOUND/ピストン尻_CUT.wav" id="94_mksm3"]
+[ext_resource type="AudioStream" uid="uid://d3b72qmkoybjh" path="res://SOUND/射精.wav" id="95_yb8dv"]
+[ext_resource type="AudioStream" uid="uid://cq5x6v5dc31ux" path="res://SOUND/28_喘ぎ声_中.wav" id="96_mksm3"]
+[ext_resource type="Texture2D" uid="uid://4ow3k76kblbs" path="res://ART/OL_Dash/OL_Dash_Pelvis_Clothed.png" id="97_dashp"]
+[ext_resource type="Texture2D" uid="uid://c1al8yq8opitp" path="res://ART/OL_Dash/OL_Dash_Hip_Clothed.png" id="98_dashh"]
+[ext_resource type="Texture2D" uid="uid://djpnldxgf4v31" path="res://ART/OL_Dash/OL_Dash_Breast_L_Clothed.png" id="99_dashbl"]
+[ext_resource type="Texture2D" uid="uid://dg35fyffcudmu" path="res://ART/OL_Dash/OL_Dash_Breast_R_Clothed.png" id="100_dashbr"]
+[ext_resource type="Script" uid="uid://cov1sg4e1x5qi" path="res://GD/dash_visual.gd" id="101_dashgd"]
+[ext_resource type="Script" uid="uid://birwsmxsvcldw" path="res://GD/horny_bra_reveal.gd" id="horny_bra_script"]
+[ext_resource type="Script" uid="uid://3pykujjwam7j" path="res://GD/horny_shirt_open.gd" id="horny_shirt_open_script"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4xbfp"]
+size = Vector2(18, 127)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uhyxe"]
+size = Vector2(18, 127)
+
+[sub_resource type="Animation" id="Animation_b6skf"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D_left:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 0, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D_right:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tq727"]
+resource_name = "swap_colors"
+length = 0.4
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D_left:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(1, 0.784314, 1, 0.478431), Color(1, 1, 1, 0.607843)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D_right:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0.784314), Color(1, 0.784314, 1, 0.478431)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_sprq5"]
+_data = {
+&"RESET": SubResource("Animation_b6skf"),
+&"swap_colors": SubResource("Animation_tq727")
+}
+
+[node name="CharacterBody2D" type="CharacterBody2D" node_paths=PackedStringArray("normal_visual", "dash_visual", "h_controller", "camera") groups=["Player"]]
+script = ExtResource("1_sxias")
+normal_visual = NodePath("Visuals/Normal_Visual")
+dash_visual = NodePath("Visuals/Dash_Visual")
+h_controller = NodePath("Visuals/OL_H_Visual")
+dash_duration = 0.5
+dash_invincible_duration = 0.6
+dash_speed = 360.0
+dash_cooldown = 0.5
+dash_ease_in = 0.1
+dash_ease_out = 0.3
+dash_end_lean_degrees = 15.0
+dash_lean_window = 0.3
+dash_lean_in_speed = 20.0
+dash_lean_recover = 50.0
+jump_velocity = -360.0
+coyote_time = 0.1
+air_shorten_from_feet = 14.0
+dash_air_shorten_from_feet = 18.0
+dash_ground_shorten_from_head = 18.0
+min_collision_height = 96.0
+land_restore_duration = 0.15
+camera = NodePath("Camera2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 21.5)
+shape = SubResource("RectangleShape2D_4xbfp")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+position_smoothing_speed = 15.0
+drag_vertical_offset = -0.8
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+z_index = 99
+texture = ExtResource("17_lmwkj")
+
+[node name="Visuals" type="Node2D" parent="." node_paths=PackedStringArray("H_Controller", "torso_node", "pelvis_node", "breasts", "butts")]
+script = ExtResource("3_2dyae")
+H_Controller = NodePath("OL_H_Visual")
+run_freq = 8.0
+dash_end_impact_vec = Vector2(20, 10)
+torso_node = NodePath("Normal_Visual/Pelvis/Torso")
+pelvis_node = NodePath("Normal_Visual/Pelvis")
+breasts = [NodePath("Normal_Visual/Pelvis/Torso/Breast_L"), NodePath("Normal_Visual/Pelvis/Torso/Breast_R")]
+b_damping_modes = Array[float]([7.0, 10.0])
+b_squash_factor = 0.03
+butts = [NodePath("Normal_Visual/Pelvis/Hip_L"), NodePath("Normal_Visual/Pelvis/Hip_R")]
+h_expand_factor = 0.0
+
+[node name="Area2D" type="Area2D" parent="Visuals"]
+collision_layer = 0
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Visuals/Area2D"]
+position = Vector2(0, 21.5)
+shape = SubResource("RectangleShape2D_uhyxe")
+
+[node name="Normal_Visual" type="Node2D" parent="Visuals"]
+
+[node name="Pelvis" type="Node2D" parent="Visuals/Normal_Visual"]
+position = Vector2(0, 4)
+
+[node name="Sprite2D_Pelvis" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis"]
+z_index = 12
+position = Vector2(0, -2)
+texture = ExtResource("2_ucfvk")
+
+[node name="Sprite2D_Pelvis2" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis"]
+z_index = 12
+position = Vector2(0, -2)
+texture = ExtResource("5_uw63b")
+
+[node name="Torso" type="Node2D" parent="Visuals/Normal_Visual/Pelvis"]
+position = Vector2(0, -8)
+
+[node name="Sprite_Torso" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso"]
+z_index = 10
+position = Vector2(-1, 4)
+texture = ExtResource("1_76bt2")
+offset = Vector2(0, -1)
+
+[node name="Sprite_Torso2" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso"]
+z_index = 10
+position = Vector2(-1, 4)
+texture = ExtResource("7_05yte")
+offset = Vector2(0, -1)
+
+[node name="Head" type="Node2D" parent="Visuals/Normal_Visual/Pelvis/Torso"]
+position = Vector2(2, -25)
+
+[node name="Sprite_Head" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Head"]
+z_index = 11
+position = Vector2(-2, 16)
+texture = ExtResource("8_xkkvp")
+offset = Vector2(0, 14)
+
+[node name="HairBack" type="Node2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Head"]
+position = Vector2(0, -4)
+
+[node name="Sprite_HairBack" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Head/HairBack"]
+z_index = 8
+position = Vector2(-2, 16)
+texture = ExtResource("9_6svqw")
+offset = Vector2(0, 18)
+
+[node name="HairFront" type="Node2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Head"]
+position = Vector2(0, -12)
+
+[node name="Sprite_HairFront" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Head/HairFront"]
+z_index = 14
+position = Vector2(-2, 16)
+texture = ExtResource("4_2dyae")
+offset = Vector2(0, 26)
+
+[node name="Breast_L" type="Node2D" parent="Visuals/Normal_Visual/Pelvis/Torso"]
+position = Vector2(5, -10)
+
+[node name="Sprite_Breast_L" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Breast_L"]
+z_index = 10
+position = Vector2(-4, 18)
+texture = ExtResource("5_2u5n8")
+offset = Vector2(0, -4)
+
+[node name="Sprite_Breast_L2" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Breast_L"]
+z_index = 9
+position = Vector2(-4, 18)
+texture = ExtResource("12_j3p37")
+offset = Vector2(0, -4)
+
+[node name="Sprite_Bra_L" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Breast_L"]
+z_index = 9
+position = Vector2(-4, 18)
+texture = ExtResource("13_4urqc")
+offset = Vector2(0, -4)
+script = ExtResource("horny_bra_script")
+config = ExtResource("15_3gqhh")
+
+[node name="Sprite_ShirtOpen_L" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Breast_L"]
+z_index = 11
+position = Vector2(-4, 18)
+texture = ExtResource("13_4urqc")
+offset = Vector2(0, -4)
+script = ExtResource("horny_shirt_open_script")
+config = ExtResource("17_tsxmm")
+cloth_nodes_to_hide = Array[NodePath]([NodePath("../Sprite_Breast_L2")])
+
+[node name="Breast_R" type="Node2D" parent="Visuals/Normal_Visual/Pelvis/Torso"]
+position = Vector2(3, -7)
+
+[node name="Sprite_Breast_R" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Breast_R"]
+z_index = 14
+position = Vector2(-2, 16)
+texture = ExtResource("6_73nau")
+offset = Vector2(0, -4)
+
+[node name="Sprite_Breast_R_Cloth" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Breast_R"]
+z_index = 13
+position = Vector2(-2, 12)
+texture = ExtResource("11_2u5n8")
+
+[node name="Sprite_Bra_R" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Breast_R"]
+z_index = 13
+position = Vector2(-2, 16)
+texture = ExtResource("15_vlvg8")
+offset = Vector2(0, -4)
+script = ExtResource("horny_bra_script")
+
+[node name="Sprite_ShirtOpen_R" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Breast_R"]
+z_index = 13
+position = Vector2(-2, 16)
+texture = ExtResource("19_3jukq")
+offset = Vector2(0, -4)
+script = ExtResource("horny_shirt_open_script")
+cloth_nodes_to_hide = Array[NodePath]([NodePath("../Sprite_Breast_R_Cloth")])
+
+[node name="Arm_R" type="Node2D" parent="Visuals/Normal_Visual/Pelvis/Torso"]
+position = Vector2(-3, -22)
+
+[node name="Sprite_UpperArm_R" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Arm_R"]
+z_index = 21
+position = Vector2(-1, 17)
+texture = ExtResource("7_skrk8")
+offset = Vector2(4, 9)
+
+[node name="Sprite_UpperArm_R2" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Arm_R"]
+z_index = 21
+position = Vector2(-1, 17)
+texture = ExtResource("16_j6lyf")
+offset = Vector2(4, 9)
+
+[node name="Forearm_R" type="Node2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Arm_R"]
+position = Vector2(-6, 19)
+
+[node name="Sprite_ForeArm_R" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Arm_R/Forearm_R"]
+z_index = 22
+position = Vector2(-1, 16)
+texture = ExtResource("8_ye16i")
+offset = Vector2(10, -9)
+
+[node name="Sprite_ForeArm_R2" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Arm_R/Forearm_R"]
+z_index = 22
+position = Vector2(-1, 16)
+texture = ExtResource("18_j2xv7")
+offset = Vector2(10, -9)
+
+[node name="Arm_L" type="Node2D" parent="Visuals/Normal_Visual/Pelvis/Torso"]
+position = Vector2(1, -22)
+
+[node name="Sprite_UpperArm_L" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Arm_L"]
+z_index = 7
+position = Vector2(-1, 18)
+texture = ExtResource("9_75u2t")
+offset = Vector2(0, 9)
+
+[node name="Sprite_UpperArm_L2" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Arm_L"]
+z_index = 7
+position = Vector2(-1, 18)
+texture = ExtResource("20_130kv")
+offset = Vector2(0, 9)
+
+[node name="Forearm_L" type="Node2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Arm_L"]
+position = Vector2(-4, 20)
+
+[node name="Sprite_ForeArm_L" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Arm_L/Forearm_L"]
+z_index = 6
+position = Vector2(-4, 19)
+texture = ExtResource("10_7qa1u")
+offset = Vector2(3, -13)
+
+[node name="Sprite_ForeArm_L2" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Torso/Arm_L/Forearm_L"]
+z_index = 6
+position = Vector2(-4, 18)
+texture = ExtResource("22_d1cqh")
+offset = Vector2(3, -13)
+
+[node name="Hip_L" type="Node2D" parent="Visuals/Normal_Visual/Pelvis"]
+position = Vector2(-5, 4)
+
+[node name="Sprite_Hip_L" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Hip_L"]
+z_index = 17
+position = Vector2(5, -6)
+texture = ExtResource("12_jsgy1")
+offset = Vector2(0, -2)
+
+[node name="Sprite_Hip_L2" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Hip_L"]
+z_index = 17
+position = Vector2(5, -6)
+texture = ExtResource("24_a340w")
+offset = Vector2(0, -2)
+
+[node name="Hip_R" type="Node2D" parent="Visuals/Normal_Visual/Pelvis"]
+position = Vector2(-3, 8)
+
+[node name="Sprite_Hip_R" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Hip_R"]
+z_index = 19
+position = Vector2(3, -10)
+texture = ExtResource("11_8gu1l")
+offset = Vector2(0, -2)
+
+[node name="Sprite_Hip_R2" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Hip_R"]
+z_index = 19
+position = Vector2(3, -9)
+texture = ExtResource("26_nw78w")
+offset = Vector2(0, -2)
+
+[node name="Thigh_R" type="Node2D" parent="Visuals/Normal_Visual/Pelvis"]
+position = Vector2(-4, 13)
+
+[node name="Sprite_Thigh_R" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Thigh_R"]
+z_index = 18
+position = Vector2(0, -14)
+texture = ExtResource("13_el80s")
+offset = Vector2(4, -2)
+
+[node name="Sprite_Thigh_R2" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Thigh_R"]
+z_index = 18
+position = Vector2(0, -14)
+texture = ExtResource("28_dpyh0")
+offset = Vector2(4, -2)
+
+[node name="Calf_R" type="Node2D" parent="Visuals/Normal_Visual/Pelvis/Thigh_R"]
+position = Vector2(1, 31)
+
+[node name="Sprite_Calf_R" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Thigh_R/Calf_R"]
+z_index = 20
+position = Vector2(-1, -11)
+texture = ExtResource("14_oxcm1")
+offset = Vector2(4, -38)
+
+[node name="Sprite_Calf_R2" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Thigh_R/Calf_R"]
+z_index = 20
+position = Vector2(-1, -10)
+texture = ExtResource("30_gmgjv")
+offset = Vector2(4, -38)
+
+[node name="Thigh_L" type="Node2D" parent="Visuals/Normal_Visual/Pelvis"]
+position = Vector2(-8, 8)
+
+[node name="Sprite_Thigh_L" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Thigh_L"]
+z_index = 15
+position = Vector2(0, -11)
+texture = ExtResource("15_ltww1")
+offset = Vector2(8, -1)
+
+[node name="Sprite_Thigh_L2" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Thigh_L"]
+z_index = 15
+position = Vector2(0, -11)
+texture = ExtResource("32_1c55x")
+offset = Vector2(8, -1)
+
+[node name="Calf_L" type="Node2D" parent="Visuals/Normal_Visual/Pelvis/Thigh_L"]
+position = Vector2(0, 33)
+
+[node name="Sprite_Calf_L" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Thigh_L/Calf_L"]
+z_index = 16
+position = Vector2(-2, -7)
+texture = ExtResource("16_a7mna")
+offset = Vector2(10, -38)
+
+[node name="Sprite_Calf_L2" type="Sprite2D" parent="Visuals/Normal_Visual/Pelvis/Thigh_L/Calf_L"]
+z_index = 16
+position = Vector2(-2, -7)
+texture = ExtResource("34_x6jt5")
+offset = Vector2(10, -38)
+
+[node name="Dash_Visual" type="Node2D" parent="Visuals" node_paths=PackedStringArray("pelvis_node", "hip_node", "breasts")]
+script = ExtResource("101_dashgd")
+pelvis_node = NodePath("Pelvis")
+hip_node = NodePath("Pelvis/Hip")
+breasts = [NodePath("Pelvis/Breast_L"), NodePath("Pelvis/Breast_R")]
+b_stiffness_modes = Array[float]([200.0, 200.0])
+b_damping_modes = Array[float]([4.0, 6.0])
+b_max_offset_modes = Array[float]([10.0, 8.0])
+b_rotation_factor_modes = Array[float]([-0.08, -0.06])
+b_squash_factor_modes = Array[float]([0.14, 0.08])
+h_stiffness_modes = Array[float]([300.0, 300.0])
+h_damping_modes = Array[float]([6.0, 8.0])
+h_rotation_factor_modes = Array[float]([-0.1, -0.1])
+h_squash_factor_modes = Array[float]([0.14, 0.08])
+b_ripple_freq_modes = Array[float]([25.0, 25.0])
+b_ripple_size_modes = Array[float]([0.1, 0.1])
+b_ripple_decay_modes = Array[float]([0.4, 0.4])
+h_ripple_freq_modes = Array[float]([30.0, 30.0])
+h_ripple_size_modes = Array[float]([0.1, 0.1])
+h_ripple_decay_modes = Array[float]([0.4, 0.4])
+dash_ripple_boost_modes = Array[float]([1.2, 1.2])
+dash_impulse_modes = Array[Vector2]([Vector2(-60, -20), Vector2(-60, -20)])
+dash_hip_impulse_modes = Array[Vector2]([Vector2(-40, -20), Vector2(-30, -15)])
+
+[node name="Pelvis" type="Node2D" parent="Visuals/Dash_Visual"]
+position = Vector2(9, 16)
+
+[node name="Sprite2D_Pelvis_NAKED" type="Sprite2D" parent="Visuals/Dash_Visual/Pelvis"]
+visible = false
+z_index = 10
+position = Vector2(-17, 9)
+texture = ExtResource("43_psomw")
+
+[node name="Sprite2D_Pelvis_CLOTHED" type="Sprite2D" parent="Visuals/Dash_Visual/Pelvis"]
+z_index = 10
+position = Vector2(-17, 9)
+texture = ExtResource("97_dashp")
+
+[node name="Sprite2D_Pelvis_ShirtOpen" type="Sprite2D" parent="Visuals/Dash_Visual/Pelvis"]
+visible = false
+z_index = 10
+position = Vector2(-17, 9)
+texture = ExtResource("45_f80l7")
+
+[node name="Hip" type="Node2D" parent="Visuals/Dash_Visual/Pelvis"]
+position = Vector2(10, 4)
+
+[node name="Sprite2D_Hip_NAKED" type="Sprite2D" parent="Visuals/Dash_Visual/Pelvis/Hip"]
+visible = false
+z_index = 12
+position = Vector2(-27, 5)
+texture = ExtResource("45_wu88h")
+
+[node name="Sprite2D_Hip_CLOTHED" type="Sprite2D" parent="Visuals/Dash_Visual/Pelvis/Hip"]
+z_index = 12
+position = Vector2(-27, 5)
+texture = ExtResource("98_dashh")
+
+[node name="Breast_L" type="Node2D" parent="Visuals/Dash_Visual/Pelvis"]
+position = Vector2(-9, -17)
+
+[node name="Sprite2D_Breast_L_NAKED" type="Sprite2D" parent="Visuals/Dash_Visual/Pelvis/Breast_L"]
+visible = false
+z_index = 14
+position = Vector2(-8, 26)
+texture = ExtResource("47_u02g3")
+
+[node name="Sprite2D_Breast_L_CLOTHED" type="Sprite2D" parent="Visuals/Dash_Visual/Pelvis/Breast_L"]
+z_index = 14
+position = Vector2(-8, 26)
+texture = ExtResource("99_dashbl")
+
+[node name="Sprite_Bra_L" type="Sprite2D" parent="Visuals/Dash_Visual/Pelvis/Breast_L"]
+z_index = 14
+position = Vector2(-8, 26)
+texture = ExtResource("50_e864g")
+script = ExtResource("horny_bra_script")
+config = ExtResource("15_3gqhh")
+
+[node name="Sprite_ShirtOpen_L" type="Sprite2D" parent="Visuals/Dash_Visual/Pelvis/Breast_L"]
+visible = false
+z_index = 14
+position = Vector2(-8, 26)
+texture = ExtResource("50_e864g")
+script = ExtResource("horny_shirt_open_script")
+config = ExtResource("17_tsxmm")
+cloth_nodes_to_hide = Array[NodePath]([NodePath("../Sprite2D_Breast_L_CLOTHED"), NodePath("../../Sprite2D_Pelvis_CLOTHED")])
+nodes_to_show_when_open = Array[NodePath]([NodePath("../../Sprite2D_Pelvis_ShirtOpen")])
+
+[node name="Breast_R" type="Node2D" parent="Visuals/Dash_Visual/Pelvis"]
+position = Vector2(-17, -17)
+
+[node name="Sprite2D_Breast_R_NAKED" type="Sprite2D" parent="Visuals/Dash_Visual/Pelvis/Breast_R"]
+visible = false
+z_index = 13
+position = Vector2(0, 26)
+texture = ExtResource("49_f80l7")
+
+[node name="Sprite2D_Breast_R_CLOTHED" type="Sprite2D" parent="Visuals/Dash_Visual/Pelvis/Breast_R"]
+z_index = 13
+position = Vector2(0, 26)
+texture = ExtResource("100_dashbr")
+
+[node name="Sprite_Bra_R" type="Sprite2D" parent="Visuals/Dash_Visual/Pelvis/Breast_R"]
+z_index = 13
+position = Vector2(0, 26)
+texture = ExtResource("53_a2xmm")
+script = ExtResource("horny_bra_script")
+config = ExtResource("15_3gqhh")
+
+[node name="Sprite_ShirtOpen_R" type="Sprite2D" parent="Visuals/Dash_Visual/Pelvis/Breast_R"]
+visible = false
+z_index = 13
+position = Vector2(0, 26)
+texture = ExtResource("53_a2xmm")
+script = ExtResource("horny_shirt_open_script")
+config = ExtResource("17_tsxmm")
+cloth_nodes_to_hide = Array[NodePath]([NodePath("../Sprite2D_Breast_R_CLOTHED")])
+
+[node name="OL_H_Visual" type="Node2D" parent="Visuals" node_paths=PackedStringArray("escape_arrow", "escape_progress_bar_root", "sfx_player_water", "sfx_player_semen", "sfx_player_voice", "animation_player")]
+script = ExtResource("23_ltww1")
+escape_arrow = NodePath("Escape_Arrow")
+escape_progress_bar_root = NodePath("Escape_ProgressBar")
+escape_threshold = 30
+sfx_player_water = NodePath("SfxImpact")
+sfx_player_semen = NodePath("SfxSemen")
+sfx_player_voice = NodePath("SfxMoan")
+voice_segments = Array[Vector2]([Vector2(1.23, 0.3), Vector2(2.19, 0.3), Vector2(6.44, 0.3), Vector2(7.51, 0.3), Vector2(29.27, 0.3)])
+voice_semen_segments = Array[Vector2]([Vector2(40.54, 0.6), Vector2(41.59, 0.65), Vector2(43.68, 0.6), Vector2(47.79, 0.6), Vector2(52.98, 0.6)])
+fx_amount_normal = 5
+fx_amount_burst = 20
+fx_pixel_shape = 1
+fx_pixel_grid = 4
+fx_highlight_size = 0.9
+fx_highlight_offset = Vector2(0, -0.6)
+fx_shade_band = 0.75
+fx_scale_min = 4.0
+fx_scale_max = 6.0
+b_rotation_factor = 5.0
+animation_player = NodePath("")
+
+[node name="H_Pose_01" parent="Visuals/OL_H_Visual" instance=ExtResource("36_qaysv")]
+visible = false
+
+[node name="FM_H_Visual" parent="Visuals/OL_H_Visual/H_Pose_01/FM_H_Pose_01" index="0" node_paths=PackedStringArray("target_h_controller")]
+target_h_controller = NodePath("../../..")
+
+[node name="H_Pose_02" parent="Visuals/OL_H_Visual" instance=ExtResource("37_cub0u")]
+visible = false
+
+[node name="SM_H_Visual" parent="Visuals/OL_H_Visual/H_Pose_02/SM_H_Pose_01" index="0" node_paths=PackedStringArray("target_h_controller")]
+target_h_controller = NodePath("../../..")
+
+[node name="H_Pose_03" parent="Visuals/OL_H_Visual" instance=ExtResource("38_7q7am")]
+visible = false
+
+[node name="M03_H_Visual" parent="Visuals/OL_H_Visual/H_Pose_03/monster_03_h" index="0" node_paths=PackedStringArray("target_h_controller")]
+target_h_controller = NodePath("../../..")
+
+[node name="H_Pose_04" parent="Visuals/OL_H_Visual" instance=ExtResource("39_vlvg8")]
+visible = false
+
+[node name="M02_H_Visual" parent="Visuals/OL_H_Visual/H_Pose_04/monster02_H" index="0" node_paths=PackedStringArray("target_h_controller")]
+target_h_controller = NodePath("../../..")
+
+[node name="H_Pose_05" parent="Visuals/OL_H_Visual" instance=ExtResource("40_hpose5")]
+visible = false
+
+[node name="SM_H_Visual" parent="Visuals/OL_H_Visual/H_Pose_05/SM_H_Pose_02" index="0" node_paths=PackedStringArray("target_h_controller")]
+target_h_controller = NodePath("../../..")
+
+[node name="H_Pose_06" parent="Visuals/OL_H_Visual" instance=ExtResource("46_dugmk")]
+visible = false
+
+[node name="FM_H_Visual" parent="Visuals/OL_H_Visual/H_Pose_06/FM_H_Pose_02" index="0" node_paths=PackedStringArray("target_h_controller")]
+target_h_controller = NodePath("../../..")
+
+[node name="TITS_FUCK_01" parent="Visuals/OL_H_Visual" instance=ExtResource("46_mwvrg")]
+visible = false
+
+[node name="M03_H_Visual" parent="Visuals/OL_H_Visual/TITS_FUCK_01/monster_03_h" index="0" node_paths=PackedStringArray("target_h_controller")]
+target_h_controller = NodePath("../../..")
+
+[node name="TITS_FUCK_02" parent="Visuals/OL_H_Visual" instance=ExtResource("47_tits02")]
+visible = false
+
+[node name="FM_H_Visual" parent="Visuals/OL_H_Visual/TITS_FUCK_02/FM_H_Pose_02" index="0" node_paths=PackedStringArray("target_h_controller")]
+target_h_controller = NodePath("../../..")
+
+[node name="TITS_FUCK_03" parent="Visuals/OL_H_Visual" instance=ExtResource("48_tits03")]
+visible = false
+
+[node name="SM_TITS_Visual" parent="Visuals/OL_H_Visual/TITS_FUCK_03/SM_TITS_FUCK" index="0" node_paths=PackedStringArray("target_h_controller")]
+target_h_controller = NodePath("../../..")
+
+[node name="Escape_ProgressBar" type="Node2D" parent="Visuals/OL_H_Visual"]
+z_index = 98
+position = Vector2(0, 114)
+
+[node name="Track" type="Line2D" parent="Visuals/OL_H_Visual/Escape_ProgressBar"]
+points = PackedVector2Array(-36, 0, 36, 0)
+width = 7.0
+default_color = Color(0.22, 0.22, 0.26, 0.92)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Fill" type="Line2D" parent="Visuals/OL_H_Visual/Escape_ProgressBar"]
+points = PackedVector2Array(-36, 0, -35.88, 0)
+width = 5.0
+default_color = Color(0.741176, 0.396078, 1, 1)
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+
+[node name="Escape_Arrow" type="Node2D" parent="Visuals/OL_H_Visual"]
+z_index = 99
+position = Vector2(0, 129)
+
+[node name="Sprite2D_left" type="Sprite2D" parent="Visuals/OL_H_Visual/Escape_Arrow"]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(-15, 0)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("91_4xbfp")
+
+[node name="Sprite2D_right" type="Sprite2D" parent="Visuals/OL_H_Visual/Escape_Arrow"]
+position = Vector2(15, 0)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("92_uhyxe")
+
+[node name="swap_colors" type="AnimationPlayer" parent="Visuals/OL_H_Visual/Escape_Arrow"]
+libraries = {
+&"": SubResource("AnimationLibrary_sprq5")
+}
+autoplay = "swap_colors"
+
+[node name="SfxImpact" type="AudioStreamPlayer" parent="Visuals/OL_H_Visual"]
+stream = ExtResource("94_mksm3")
+volume_db = -6.0
+
+[node name="SfxSemen" type="AudioStreamPlayer" parent="Visuals/OL_H_Visual"]
+stream = ExtResource("95_yb8dv")
+
+[node name="SfxMoan" type="AudioStreamPlayer" parent="Visuals/OL_H_Visual"]
+stream = ExtResource("96_mksm3")
+
+[editable path="Visuals/OL_H_Visual/H_Pose_01"]
+[editable path="Visuals/OL_H_Visual/H_Pose_01/FM_H_Pose_01"]
+[editable path="Visuals/OL_H_Visual/H_Pose_02"]
+[editable path="Visuals/OL_H_Visual/H_Pose_02/SM_H_Pose_01"]
+[editable path="Visuals/OL_H_Visual/H_Pose_03"]
+[editable path="Visuals/OL_H_Visual/H_Pose_03/monster_03_h"]
+[editable path="Visuals/OL_H_Visual/H_Pose_04"]
+[editable path="Visuals/OL_H_Visual/H_Pose_04/monster02_H"]
+[editable path="Visuals/OL_H_Visual/H_Pose_05"]
+[editable path="Visuals/OL_H_Visual/H_Pose_05/SM_H_Pose_02"]
+[editable path="Visuals/OL_H_Visual/H_Pose_06"]
+[editable path="Visuals/OL_H_Visual/H_Pose_06/FM_H_Pose_02"]
+[editable path="Visuals/OL_H_Visual/TITS_FUCK_01"]
+[editable path="Visuals/OL_H_Visual/TITS_FUCK_01/monster_03_h"]
+[editable path="Visuals/OL_H_Visual/TITS_FUCK_02"]
+[editable path="Visuals/OL_H_Visual/TITS_FUCK_02/FM_H_Pose_02"]
+[editable path="Visuals/OL_H_Visual/TITS_FUCK_03"]

@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=3 uid="uid://bwn6uk6ep3hp5"]
+
+[ext_resource type="Script" uid="uid://bflxbhshbo6x5" path="res://GD/settings_panel.gd" id="1_settings"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_panel"]
+bg_color = Color(0, 0, 0, 0.501961)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.78, 0.42, 1, 0.85)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_disp"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_lang"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_vol"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_back"]
+font_size = 24
+
+[node name="SettingsPanel" type="Panel"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -200.0
+offset_top = -90.0
+offset_right = 200.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_panel")
+script = ExtResource("1_settings")
+
+[node name="VBox" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -180.0
+offset_top = -70.0
+offset_right = 180.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Display" type="Label" parent="VBox"]
+layout_mode = 2
+text = "Display: < Window 1080P >"
+label_settings = SubResource("LabelSettings_disp")
+horizontal_alignment = 1
+
+[node name="Language" type="Label" parent="VBox"]
+layout_mode = 2
+text = "Language: < English >"
+label_settings = SubResource("LabelSettings_lang")
+horizontal_alignment = 1
+
+[node name="Volume" type="Label" parent="VBox"]
+layout_mode = 2
+text = "Volume: < 8 >"
+label_settings = SubResource("LabelSettings_vol")
+horizontal_alignment = 1
+
+[node name="Back" type="Label" parent="VBox"]
+layout_mode = 2
+text = "Back"
+label_settings = SubResource("LabelSettings_back")
+horizontal_alignment = 1

@@ -1,0 +1,99 @@
+[gd_scene load_steps=10 format=3 uid="uid://djs6x4bsxftuv"]
+
+[ext_resource type="Script" uid="uid://bgyoi0cprb4mr" path="res://GD/SM_H_POSE_02_Controller.gd" id="1_smhp2"]
+[ext_resource type="Texture2D" uid="uid://www11tkwcanl" path="res://ART/SM_H_POSE2/SM_H_POSE2.png" id="2_smhp2"]
+[ext_resource type="Texture2D" uid="uid://31xqwb1h7ahq" path="res://ART/SM_H_POSE2/SM_H_POSE2_01.png" id="3_smhp2"]
+[ext_resource type="Texture2D" uid="uid://b28nsh06hdku7" path="res://ART/SM_H_POSE2/SM_H_POSE2_02.png" id="4_smhp2"]
+[ext_resource type="Texture2D" uid="uid://jx1ffufpsmv5" path="res://ART/SM_H_POSE2/SM_H_POSE2_03.png" id="5_smhp2"]
+[ext_resource type="Texture2D" uid="uid://d2cxe2c2twxk7" path="res://ART/SM_H_POSE2/SM_H_POSE2_04.png" id="6_smhp2"]
+[ext_resource type="Texture2D" uid="uid://dwkbpvl705lir" path="res://ART/SM_H_POSE2/SM_H_POSE2_05.png" id="7_smhp2"]
+[ext_resource type="Texture2D" uid="uid://bfiu5g1vxlaxf" path="res://ART/SM_H_POSE2/SM_H_POSE2_06.png" id="8_smhp2"]
+[ext_resource type="Texture2D" uid="uid://dassphfsly2yy" path="res://TRES/radial_light_texture.tres" id="9_eyelight"]
+
+[node name="SM_H_Pose_02" type="Node2D"]
+
+[node name="SM_H_Visual" type="Node2D" parent="." node_paths=PackedStringArray("pelvis_node", "torso_node", "arm_l_node", "arm_r_node", "calf_l_node", "calf_r_node", "dick_node")]
+script = ExtResource("1_smhp2")
+thrust_distance = 18.0
+thrust_offset_vec = Vector2(0, -1)
+pelvis_node = NodePath("Pelvis")
+pelvis_rotation_bend = 0.0
+torso_node = NodePath("Torso")
+torso_inertia = 0.5
+torso_rotation = 0.0
+arm_l_node = NodePath("Torso/Arm_L")
+arm_l_inertia = 0.5
+arm_l_rotation = 2.0
+arm_r_node = NodePath("Torso/Arm_R")
+arm_r_inertia = 0.5
+arm_r_rotation = -2.0
+calf_l_node = NodePath("Pelvis/Calf_L")
+calf_l_inertia = 0.8
+calf_l_rotation = 1.0
+calf_r_node = NodePath("Pelvis/Calf_R")
+calf_r_inertia = 0.8
+calf_r_rotation = -1.0
+dick_node = NodePath("Pelvis/Dick")
+dick_inertia = 0.0
+dick_rotation = -2.0
+
+[node name="Pelvis" type="Node2D" parent="SM_H_Visual"]
+position = Vector2(0, -2)
+
+[node name="Sprite2D_Pelvis" type="Sprite2D" parent="SM_H_Visual/Pelvis"]
+visible = false
+z_index = 10
+texture = ExtResource("2_smhp2")
+
+[node name="Calf_L" type="Node2D" parent="SM_H_Visual/Pelvis"]
+
+[node name="Sprite2D_Calf_L" type="Sprite2D" parent="SM_H_Visual/Pelvis/Calf_L"]
+z_index = 10
+texture = ExtResource("6_smhp2")
+
+[node name="Calf_R" type="Node2D" parent="SM_H_Visual/Pelvis"]
+
+[node name="Sprite2D_Calf_R" type="Sprite2D" parent="SM_H_Visual/Pelvis/Calf_R"]
+z_index = 10
+texture = ExtResource("7_smhp2")
+
+[node name="Dick" type="Node2D" parent="SM_H_Visual/Pelvis"]
+position = Vector2(0, 26)
+
+[node name="Sprite2D_Dick" type="Sprite2D" parent="SM_H_Visual/Pelvis/Dick"]
+z_index = 10
+position = Vector2(0, -17)
+texture = ExtResource("3_smhp2")
+
+[node name="Torso" type="Node2D" parent="SM_H_Visual"]
+position = Vector2(0, 5)
+
+[node name="Sprite2D_Torso" type="Sprite2D" parent="SM_H_Visual/Torso"]
+z_index = 8
+texture = ExtResource("8_smhp2")
+
+[node name="EyeLight_L" type="PointLight2D" parent="SM_H_Visual/Torso"]
+position = Vector2(-4, -58)
+color = Color(1, 0.12, 0.1, 1)
+energy = 0.2
+texture = ExtResource("9_eyelight")
+texture_scale = 0.16
+
+[node name="EyeLight_R" type="PointLight2D" parent="SM_H_Visual/Torso"]
+position = Vector2(4, -58)
+color = Color(1, 0.12, 0.1, 1)
+energy = 0.2
+texture = ExtResource("9_eyelight")
+texture_scale = 0.16
+
+[node name="Arm_L" type="Node2D" parent="SM_H_Visual/Torso"]
+
+[node name="Sprite2D_Arm_L" type="Sprite2D" parent="SM_H_Visual/Torso/Arm_L"]
+z_index = 13
+texture = ExtResource("4_smhp2")
+
+[node name="Arm_R" type="Node2D" parent="SM_H_Visual/Torso"]
+
+[node name="Sprite2D_Arm_R" type="Sprite2D" parent="SM_H_Visual/Torso/Arm_R"]
+z_index = 13
+texture = ExtResource("5_smhp2")

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="HornyShirtOpenConfig" load_steps=2 format=3 uid="uid://bxemsoxrasp0h"]
+
+[ext_resource type="Script" uid="uid://dxkim4yiifd1j" path="res://GD/horny_shirt_open_config.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+duration_seconds = 15.0

@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="HornyBraRevealConfig" load_steps=2 format=3 uid="uid://dkkq3sa2tmbl7"]
+
+[ext_resource type="Script" uid="uid://cnpvddyft5l5j" path="res://GD/horny_bra_reveal_config.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+threshold_a = 50.0
+alpha_a = 0.15
+threshold_b = 80.0
+alpha_b = 0.3

@@ -1,0 +1,129 @@
+{
+  "pose_id": "h_pose_01",
+  "scene": "TSCN/h_pose_01.tscn",
+  "pose_root": "",
+  "art_dir": "ART/H_POSE1",
+  "preview_scene": "TOOLS/art_pipeline/_preview/h_pose_01.tscn",
+  "parts": [
+    {
+      "node": "Torso/Sprite2D_Torso_NAKED",
+      "krita_layer": "Torso_Naked",
+      "fill": false,
+      "current_texture": "res://ART/H_POSE1/H_Pose1-9.png.png"
+    },
+    {
+      "node": "Torso/Sprite2D_Torso_CLOTHED",
+      "krita_layer": "Torso_Clothed",
+      "fill": false,
+      "current_texture": "res://ART/H_POSE1/H_Pose1-19.png.png"
+    },
+    {
+      "node": "Torso/Breast_L/Sprite2D_Breast_L_NAKED",
+      "krita_layer": "Breast_L_Naked",
+      "fill": false,
+      "current_texture": "res://ART/H_POSE1/H_Pose1-11.png.png"
+    },
+    {
+      "node": "Torso/Breast_L/Sprite2D_Breast_L_CLOTHED",
+      "krita_layer": "Breast_L_Clothed",
+      "fill": false,
+      "current_texture": "res://ART/H_POSE1/H_Pose1-15.png.png"
+    },
+    {
+      "node": "Torso/Breast_L/Sprite_Bra_L",
+      "krita_layer": "Breast_L_Bra",
+      "fill": false,
+      "current_texture": "res://ART/H_POSE1/H_Pose1_Breast_L_Bra.png"
+    },
+    {
+      "node": "Torso/Breast_L/Sprite_ShirtOpen_L",
+      "krita_layer": "Breast_L_ShirtOpen",
+      "fill": false,
+      "current_texture": "res://ART/H_POSE1/H_Pose1_Breast_L_Bra.png"
+    },
+    {
+      "node": "Torso/Breast_R/Sprite2D_Breast_R_NAKED",
+      "krita_layer": "Breast_R_Naked",
+      "fill": false,
+      "current_texture": "res://ART/H_POSE1/H_Pose1-10.png.png"
+    },
+    {
+      "node": "Torso/Breast_R/Sprite2D_Breast_R_CLOTHED",
+      "krita_layer": "Breast_R_Clothed",
+      "fill": false,
+      "current_texture": "res://ART/H_POSE1/H_Pose1-14.png.png"
+    },
+    {
+      "node": "Torso/Breast_R/Sprite_Bra_R",
+      "krita_layer": "Breast_R_Bra",
+      "fill": false,
+      "current_texture": "res://ART/H_POSE1/H_Pose1_Breast_R_Bra.png"
+    },
+    {
+      "node": "Torso/Breast_R/Sprite_ShirtOpen_R",
+      "krita_layer": "Breast_R_ShirtOpen",
+      "fill": false,
+      "current_texture": "res://ART/H_POSE1/H_Pose1_Breast_R_Bra.png"
+    },
+    {
+      "node": "Pelvis/Sprite2D_Pelvis_NAKED",
+      "krita_layer": "Pelvis_Naked",
+      "fill": false,
+      "current_texture": "res://ART/H_POSE1/H_Pose1-6.png.png"
+    },
+    {
+      "node": "Pelvis/Sprite2D_Pelvis_CLOTHED",
+      "krita_layer": "Pelvis_Clothed",
+      "fill": false,
+      "current_texture": "res://ART/H_POSE1/H_Pose1-16.png.png"
+    },
+    {
+      "node": "Pelvis/Hip_L/Sprite2D_Hip_L_NAKED",
+      "krita_layer": "Hip_L_Naked",
+      "fill": false,
+      "current_texture": "res://ART/H_POSE1/H_Pose1-13.png.png"
+    },
+    {
+      "node": "Pelvis/Hip_L/Sprite2D_Hip_L_CLOTHED",
+      "krita_layer": "Hip_L_Clothed",
+      "fill": false,
+      "current_texture": "res://ART/H_POSE1/H_Pose1-21.png.png"
+    },
+    {
+      "node": "Pelvis/Hip_R/Sprite2D_Hip_R_NAKED",
+      "krita_layer": "Hip_R_Naked",
+      "fill": false,
+      "current_texture": "res://ART/H_POSE1/H_Pose1-12.png.png"
+    },
+    {
+      "node": "Pelvis/Hip_R/Sprite2D_Hip_R_CLOTHED",
+      "krita_layer": "Hip_R_Clothed",
+      "fill": false,
+      "current_texture": "res://ART/H_POSE1/H_Pose1-20.png.png"
+    },
+    {
+      "node": "Pelvis/Thigh_L/Sprite2D_Thigh_L_NAKED",
+      "krita_layer": "Thigh_L_Naked",
+      "fill": false,
+      "current_texture": "res://ART/H_POSE1/H_Pose1-8.png.png"
+    },
+    {
+      "node": "Pelvis/Thigh_L/Sprite2D_Thigh_L_CLOTHED",
+      "krita_layer": "Thigh_L_Clothed",
+      "fill": false,
+      "current_texture": "res://ART/H_POSE1/H_Pose1-18.png.png"
+    },
+    {
+      "node": "Pelvis/Pussy/Sprite2D_Pussy_NAKED",
+      "krita_layer": "Pussy_Naked",
+      "fill": false,
+      "current_texture": "res://ART/H_POSE1/H_Pose1-7.png.png"
+    },
+    {
+      "node": "Pelvis/Pussy/Sprite2D_Pussy_CLOTHED",
+      "krita_layer": "Pussy_Clothed",
+      "fill": false,
+      "current_texture": "res://ART/H_POSE1/H_Pose1-17.png.png"
+    }
+  ]
+}

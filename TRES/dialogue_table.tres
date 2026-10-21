@@ -1,0 +1,851 @@
+[gd_resource type="Resource" script_class="DialogueTable" load_steps=123 format=3 uid="uid://5muhlljdt6wb"]
+
+[ext_resource type="Script" uid="uid://dntlov5txhioo" path="res://GD/dialogue_table.gd" id="1_table"]
+[ext_resource type="Script" uid="uid://b01xmcsi3u4fb" path="res://GD/dialogue_entry.gd" id="2_entry"]
+[ext_resource type="Script" uid="uid://bc68g136ie88y" path="res://GD/dialogue_line.gd" id="3_line"]
+
+[sub_resource type="Resource" id="line_tut00_1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "...I dozed off working overtime and had a weird dream—everyone in the office wanted to violate me..."
+text_ja = "……残業してうたた寝したら、変な夢を見た。オフィスのみんなが私を犯そうとして…"
+
+[sub_resource type="Resource" id="line_tut00_2"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "My head and body still feel floaty... I should save the files on my PC and come back tomorrow."
+text_ja = "頭も体もふわふわする……とりあえずパソコンのデータを保存して、続きは明日にしよう。"
+
+[sub_resource type="Resource" id="entry_tut00"]
+script = ExtResource("2_entry")
+id = "tut_00_move"
+lines = Array[ExtResource("3_line")]([SubResource("line_tut00_1"), SubResource("line_tut00_2")])
+
+[sub_resource type="Resource" id="line_tut01_1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "There's a height difference ahead... I wonder when they'll ever fix this place..."
+text_ja = "先に段差がある……いつになったら直るんだろう…"
+
+[sub_resource type="Resource" id="line_tut01_2"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "I have to hop every time I go in and out of here..."
+text_ja = "ここを出入りするたびに、毎回ジャンプしないと…"
+
+[sub_resource type="Resource" id="entry_tut01"]
+script = ExtResource("2_entry")
+id = "tut_01_jump"
+lines = Array[ExtResource("3_line")]([SubResource("line_tut01_1"), SubResource("line_tut01_2")])
+
+[sub_resource type="Resource" id="line_tut02_1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "Weird... I don't remember the desks being arranged like this."
+text_ja = "おかしい……ここのデスク、こんな置き方だったっけ？"
+
+[sub_resource type="Resource" id="line_tut02_2"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "I'll try climbing down."
+text_ja = "降りてみよう。"
+
+[sub_resource type="Resource" id="entry_tut02"]
+script = ExtResource("2_entry")
+id = "tut_02_desk"
+lines = Array[ExtResource("3_line")]([SubResource("line_tut02_1"), SubResource("line_tut02_2")])
+
+[sub_resource type="Resource" id="line_tut03_1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "The whole atmosphere feels wrong... just like that dream..."
+text_ja = "空気が変……さっきの夢と同じ…"
+
+[sub_resource type="Resource" id="line_tut03_2"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "I can still dash a little. I need to get home."
+text_ja = "まだ少しダッシュできる。早く帰ろう。"
+
+[sub_resource type="Resource" id="entry_tut03"]
+script = ExtResource("2_entry")
+id = "tut_03_dash"
+lines = Array[ExtResource("3_line")]([SubResource("line_tut03_1"), SubResource("line_tut03_2")])
+
+[sub_resource type="Resource" id="line_tut04_1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "That person up ahead... a coworker from another section? Why is he still here?"
+text_ja = "あそこにいるの……他課の同僚？どうしてまだいるの？"
+
+[sub_resource type="Resource" id="line_tut04_2"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "...He looks weird. I've got a bad feeling. Better dash past him when I get close."
+text_ja = "……様子がおかしい。嫌な予感がする。近づいたらダッシュで通り過ぎよう。"
+
+[sub_resource type="Resource" id="entry_tut04"]
+script = ExtResource("2_entry")
+id = "tut_04_enemy"
+lines = Array[ExtResource("3_line")]([SubResource("line_tut04_1"), SubResource("line_tut04_2")])
+
+[sub_resource type="Resource" id="line_tut05_1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "...Just like the dream!"
+text_ja = "……さっきの夢と同じ！"
+
+[sub_resource type="Resource" id="line_tut05_2"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "If you get caught, it turns into H—HP drains while it feels good, and the more aroused you get, the harder it is to resist."
+text_ja = "捕まったらHになる。HPが減るのに気持ちよくて、興奮するほど抗えなくなる。"
+
+[sub_resource type="Resource" id="line_tut05_3"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "That fluid they pumped into me at the end... I should wash it off soon."
+text_ja = "最後に体に注がれた液体……早く洗い流さないと。"
+
+[sub_resource type="Resource" id="entry_tut05"]
+script = ExtResource("2_entry")
+id = "tut_05_after_h"
+lines = Array[ExtResource("3_line")]([SubResource("line_tut05_1"), SubResource("line_tut05_2"), SubResource("line_tut05_3")])
+
+[sub_resource type="Resource" id="line_tut05b_1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "I don't want to look back..."
+text_ja = "もう振り返りたくない…"
+
+[sub_resource type="Resource" id="entry_tut05b"]
+script = ExtResource("2_entry")
+id = "tut_05b_no_return"
+lines = Array[ExtResource("3_line")]([SubResource("line_tut05b_1")])
+
+[sub_resource type="Resource" id="line_tut05c_1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "The first-aid kits and mineral water will respawn after I change scenes. I can come back for them later."
+text_ja = "救急箱とミネラルウォーターはシーンを切り替えたら復活する。あとでまた取りに来ればいい。"
+
+[sub_resource type="Resource" id="entry_tut05c"]
+script = ExtResource("2_entry")
+id = "tut_05c_refill"
+lines = Array[ExtResource("3_line")]([SubResource("line_tut05c_1")])
+
+[sub_resource type="Resource" id="line_tut06_1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "There's a vending machine ahead... It says \"~Insert Semen~\"."
+text_ja = "先に自販機がある……「～Semenを投入してください～」って書いてある。"
+
+[sub_resource type="Resource" id="line_tut06_2"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "When did they change that...? So can I trade what I just got... for something?"
+text_ja = "いつからこうなったの……じゃあさっきの……あれで何か換えるの？"
+
+[sub_resource type="Resource" id="entry_tut06"]
+script = ExtResource("2_entry")
+id = "tut_06_shop"
+lines = Array[ExtResource("3_line")]([SubResource("line_tut06_1"), SubResource("line_tut06_2")])
+
+[sub_resource type="Resource" id="line_tut07_1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "Why does the exit look like this...? What on earth is going on?"
+text_ja = "出口のドアがこんな姿に……一体どうなってるの？"
+
+[sub_resource type="Resource" id="line_tut07_2"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "Whatever. I don't want to look back—I just want to go home."
+text_ja = "もういい。振り返りたくない。ただ早く帰りたい。"
+
+[sub_resource type="Resource" id="entry_tut07"]
+script = ExtResource("2_entry")
+id = "tut_07_door"
+lines = Array[ExtResource("3_line")]([SubResource("line_tut07_1"), SubResource("line_tut07_2")])
+
+[sub_resource type="Resource" id="line_story_1"]
+script = ExtResource("3_line")
+speaker_en = "Heroine"
+speaker_ja = "ヒロイン"
+show_heroine_portrait = true
+text_en = "A new area... Something feels off."
+text_ja = "新しいエリア……なんだか様子がおかしい。"
+
+[sub_resource type="Resource" id="line_story_2"]
+script = ExtResource("3_line")
+speaker_en = ""
+speaker_ja = ""
+show_heroine_portrait = false
+text_en = "(Story triggers play once when you enter the zone.)"
+text_ja = "（ストーリートリガーはエリア進入時に一度だけ再生されます。）"
+
+[sub_resource type="Resource" id="entry_story"]
+script = ExtResource("2_entry")
+id = "story_demo_area"
+lines = Array[ExtResource("3_line")]([SubResource("line_story_1"), SubResource("line_story_2")])
+
+[sub_resource type="Resource" id="line_tut_h0_1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "Stop! What are you doing!? Ah~ that feels so weird, nn..."
+text_ja = "やめて！何するの！？あ〜変な感じ、ん…"
+
+[sub_resource type="Resource" id="entry_tut_h0"]
+script = ExtResource("2_entry")
+id = "tut_h_stage_0"
+lines = Array[ExtResource("3_line")]([SubResource("line_tut_h0_1")])
+
+[sub_resource type="Resource" id="line_tut_h1_1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "Nn... why... draining my life but it feels so good... ah..."
+text_ja = "ん…なんで…はぁ…命が削られるのに気持ちいい…あ…"
+
+[sub_resource type="Resource" id="entry_tut_h1"]
+script = ExtResource("2_entry")
+id = "tut_h_stage_1"
+lines = Array[ExtResource("3_line")]([SubResource("line_tut_h1_1")])
+
+[sub_resource type="Resource" id="line_tut_h2_1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "Nn... ah... nn... I can't... ah..."
+text_ja = "ん…ぁ…ん…だめ…ぁ…"
+
+[sub_resource type="Resource" id="entry_tut_h2"]
+script = ExtResource("2_entry")
+id = "tut_h_stage_2"
+lines = Array[ExtResource("3_line")]([SubResource("line_tut_h2_1")])
+
+[sub_resource type="Resource" id="line_tut_h3_1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "...So much is going in... ah~ nn..."
+text_ja = "……いっぱい入ってくる…あ〜ん…"
+
+[sub_resource type="Resource" id="entry_tut_h3"]
+script = ExtResource("2_entry")
+id = "tut_h_stage_3"
+lines = Array[ExtResource("3_line")]([SubResource("line_tut_h3_1")])
+
+[sub_resource type="Resource" id="line_lvl01_gate_1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "Oh no—there's a man standing in front of the energy barrier..."
+text_ja = "まずい…エネルギーバリアの前に男が立ってる…"
+
+[sub_resource type="Resource" id="line_lvl01_gate_2"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "I remember him. He's security. How am I supposed to get his clearance to shut this thing down?"
+text_ja = "確か警備の人だ。どうやって権限をもらって、このバリアを止めればいいの？"
+
+[sub_resource type="Resource" id="line_lvl01_gate_3"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "...He's not charging at me. Looks like he hasn't turned into a monster."
+text_ja = "…こっちに突進してこない。まだモンスター化してないみたい。"
+
+[sub_resource type="Resource" id="line_lvl01_gate_4"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "But... he looks like he's in pain."
+text_ja = "でも…苦しそう。"
+
+[sub_resource type="Resource" id="line_lvl01_gate_5"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "Either way, maybe I can talk to him—ask him to help shut down the barrier..."
+text_ja = "とにかく話しかけて、バリアを止めるのを頼んでみよう…"
+
+[sub_resource type="Resource" id="entry_lvl01_gate_before"]
+script = ExtResource("2_entry")
+id = "lvl01_gate_before"
+lines = Array[ExtResource("3_line")]([SubResource("line_lvl01_gate_1"), SubResource("line_lvl01_gate_2"), SubResource("line_lvl01_gate_3"), SubResource("line_lvl01_gate_4"), SubResource("line_lvl01_gate_5")])
+
+[sub_resource type="Resource" id="line_lvl01_start_door_1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "I need to find the way home, quick..."
+text_ja = "早く帰り道を見つけなきゃ…"
+
+[sub_resource type="Resource" id="entry_lvl01_start_door"]
+script = ExtResource("2_entry")
+id = "lvl01_start_door"
+lines = Array[ExtResource("3_line")]([SubResource("line_lvl01_start_door_1")])
+
+[sub_resource type="Resource" id="line_lvl02_01_bl_1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "I should keep heading home... Still a ways to go."
+text_ja = "このまま帰り道を進もう…まだ先は長い。"
+
+[sub_resource type="Resource" id="entry_lvl02_01_bl"]
+script = ExtResource("2_entry")
+id = "lvl02_01_bl_door"
+lines = Array[ExtResource("3_line")]([SubResource("line_lvl02_01_bl_1")])
+
+[sub_resource type="Resource" id="line_lvl02_04_yellow_1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "What happened here? This looks nothing like I remember..."
+text_ja = "ここ…どうなってるの？記憶の中の様子と全然違う…"
+
+[sub_resource type="Resource" id="entry_lvl02_04_yellow"]
+script = ExtResource("2_entry")
+id = "lvl02_04_yellow_enter"
+lines = Array[ExtResource("3_line")]([SubResource("line_lvl02_04_yellow_1")])
+
+[sub_resource type="Resource" id="line_lvl02_04_gate_1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "...That woman ahead looks like she's asking for help..."
+text_ja = "…前の女の人が助けを求めてる顔をしてる…"
+
+[sub_resource type="Resource" id="line_lvl02_04_gate_2"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "I should talk to her."
+text_ja = "話しかけてみよう。"
+
+[sub_resource type="Resource" id="entry_lvl02_04_gate_before"]
+script = ExtResource("2_entry")
+id = "lvl02_04_gate_before"
+lines = Array[ExtResource("3_line")]([SubResource("line_lvl02_04_gate_1"), SubResource("line_lvl02_04_gate_2")])
+
+[sub_resource type="Resource" id="line_lvl03_01_l_door_1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "What was that room just now... I need to find a way out, quick..."
+text_ja = "さっきの部屋は一体……早く出口を見つけなきゃ…"
+
+[sub_resource type="Resource" id="entry_lvl03_01_l_door"]
+script = ExtResource("2_entry")
+id = "lvl03_01_l_door"
+lines = Array[ExtResource("3_line")]([SubResource("line_lvl03_01_l_door_1")])
+
+[sub_resource type="Resource" id="line_lvl03_05_s1a"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "That person ahead has such a creepy look in their eyes... but they're not chasing me."
+text_ja = "前の人の目つきが不気味…でも追いかけてこない。"
+
+[sub_resource type="Resource" id="line_lvl03_05_s1b"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "Don't tell me... they want me to do that thing too...?"
+text_ja = "まさか…また、あのことを要求されるの…？"
+
+[sub_resource type="Resource" id="entry_lvl03_05_story1"]
+script = ExtResource("2_entry")
+id = "lvl03_05_story1"
+lines = Array[ExtResource("3_line")]([SubResource("line_lvl03_05_s1a"), SubResource("line_lvl03_05_s1b")])
+
+[sub_resource type="Resource" id="line_lvl03_06_s2"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "Nooo! Run!"
+text_ja = "やめて！逃げなきゃ！"
+
+[sub_resource type="Resource" id="entry_lvl03_06_story2"]
+script = ExtResource("2_entry")
+id = "lvl03_06_story2"
+lines = Array[ExtResource("3_line")]([SubResource("line_lvl03_06_s2")])
+
+[sub_resource type="Resource" id="line_lvl03_06_s3"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "Aaaahhh! I have no choice—jump down!!!"
+text_ja = "うわあああっ！下に跳ぶしかない！！！"
+
+[sub_resource type="Resource" id="entry_lvl03_06_story3"]
+script = ExtResource("2_entry")
+id = "lvl03_06_story3"
+lines = Array[ExtResource("3_line")]([SubResource("line_lvl03_06_s3")])
+
+[sub_resource type="Resource" id="line_lvl03_07_s1a"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "...I... think I just fell from somewhere really high."
+text_ja = "……私……さっき、すごく高いところから落ちた気がする。"
+
+[sub_resource type="Resource" id="line_lvl03_07_s1b"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "...My head feels a little dizzy..."
+text_ja = "……頭が少しぼんやりする…"
+
+[sub_resource type="Resource" id="line_lvl03_07_s1c"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "My body feels so light... and a little warm..."
+text_ja = "体がすごく軽い…それに、少し熱い…"
+
+[sub_resource type="Resource" id="line_lvl03_07_s1d"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "It's a heat... like burning desire."
+text_ja = "これは……欲に焼かれるような熱。"
+
+[sub_resource type="Resource" id="entry_lvl03_07_story1"]
+script = ExtResource("2_entry")
+id = "lvl03_07_story1"
+lines = Array[ExtResource("3_line")]([SubResource("line_lvl03_07_s1a"), SubResource("line_lvl03_07_s1b"), SubResource("line_lvl03_07_s1c"), SubResource("line_lvl03_07_s1d")])
+
+[sub_resource type="Resource" id="line_lvl03_07_s2a"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "These people... when did they get here?"
+text_ja = "この人たち……いつからここに？"
+
+[sub_resource type="Resource" id="line_lvl03_07_s2b"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "It looks like they want to do something to me..."
+text_ja = "私に、何かしようとしているみたい…"
+
+[sub_resource type="Resource" id="entry_lvl03_07_story2"]
+script = ExtResource("2_entry")
+id = "lvl03_07_story2"
+lines = Array[ExtResource("3_line")]([SubResource("line_lvl03_07_s2a"), SubResource("line_lvl03_07_s2b")])
+
+[sub_resource type="Resource" id="line_lvl03_07_s3a"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "I don't want to struggle anymore... it actually feels pretty good."
+text_ja = "もう抵抗したくない…実は、けっこう気持ちいい。"
+
+[sub_resource type="Resource" id="line_lvl03_07_s3b"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "As long as I..."
+text_ja = "私が…"
+
+[sub_resource type="Resource" id="line_lvl03_07_s3c"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "As long as..."
+text_ja = "ただ…"
+
+[sub_resource type="Resource" id="line_lvl03_07_s3d"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "I follow the pleasure in my body and enjoy climax..."
+text_ja = "体の快感に身を任せて、イキを楽しめば…"
+
+[sub_resource type="Resource" id="line_lvl03_07_s3e"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "I..."
+text_ja = "私…"
+
+[sub_resource type="Resource" id="line_lvl03_07_s3f"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "......"
+text_ja = "……"
+
+[sub_resource type="Resource" id="line_lvl03_07_s3g"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "I want even more..."
+text_ja = "もっと、ほしい…"
+
+[sub_resource type="Resource" id="entry_lvl03_07_story3"]
+script = ExtResource("2_entry")
+id = "lvl03_07_story3"
+lines = Array[ExtResource("3_line")]([SubResource("line_lvl03_07_s3a"), SubResource("line_lvl03_07_s3b"), SubResource("line_lvl03_07_s3c"), SubResource("line_lvl03_07_s3d"), SubResource("line_lvl03_07_s3e"), SubResource("line_lvl03_07_s3f"), SubResource("line_lvl03_07_s3g")])
+
+[sub_resource type="Resource" id="line_talk_1"]
+script = ExtResource("3_line")
+speaker_en = "Heroine"
+speaker_ja = "ヒロイン"
+show_heroine_portrait = true
+text_en = "This is a talk trigger demo. Press Z or Enter to continue."
+text_ja = "会話トリガーのデモです。ZまたはEnterで進みます。"
+
+[sub_resource type="Resource" id="line_talk_2"]
+script = ExtResource("3_line")
+speaker_en = "Heroine"
+speaker_ja = "ヒロイン"
+show_heroine_portrait = false
+text_en = "Place TalkTrigger in the scene and set dialogue_id to talk_demo_npc."
+text_ja = "シーンにTalkTriggerを置き、dialogue_idをtalk_demo_npcにしてください。"
+
+[sub_resource type="Resource" id="entry_talk"]
+script = ExtResource("2_entry")
+id = "talk_demo_npc"
+lines = Array[ExtResource("3_line")]([SubResource("line_talk_1"), SubResource("line_talk_2")])
+
+[sub_resource type="Resource" id="line_gate_m01_f1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "Finally, a normal person! Are you okay?"
+text_ja = "やっと普通の人に会えた！大丈夫？"
+
+[sub_resource type="Resource" id="line_gate_m01_f2"]
+script = ExtResource("3_line")
+speaker_en = "Man"
+speaker_ja = "男"
+show_heroine_portrait = false
+text_en = "Please... help me... I feel so awful."
+text_ja = "お願い…助けて…すごく苦しい…"
+
+[sub_resource type="Resource" id="line_gate_m01_f3"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "How can I help you?"
+text_ja = "どうすれば手伝える？"
+
+[sub_resource type="Resource" id="line_gate_m01_f4"]
+script = ExtResource("3_line")
+speaker_en = "Man"
+speaker_ja = "男"
+show_heroine_portrait = false
+text_en = "...It really hurts... especially looking at those huge breasts of yours."
+text_ja = "…本当に…苦しい。特に、お前のあの巨大な胸を見ると…"
+
+[sub_resource type="Resource" id="line_gate_m01_f5"]
+script = ExtResource("3_line")
+speaker_en = "Man"
+speaker_ja = "男"
+show_heroine_portrait = false
+text_en = "Please, use them to get me off..."
+text_ja = "お願い、パイズリで出させてくれ…"
+
+[sub_resource type="Resource" id="line_gate_m01_f6"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "Are you kidding? I just want to go home."
+text_ja = "冗談でしょ？私は早く帰りたいだけよ"
+
+[sub_resource type="Resource" id="line_gate_m01_f7"]
+script = ExtResource("3_line")
+speaker_en = "Man"
+speaker_ja = "男"
+show_heroine_portrait = false
+text_en = "Without my clearance... you can't get through that door."
+text_ja = "俺の権限がなければ…あの扉は通れない。"
+
+[sub_resource type="Resource" id="line_gate_m01_f8"]
+script = ExtResource("3_line")
+speaker_en = "Man"
+speaker_ja = "男"
+show_heroine_portrait = false
+text_en = "Hurry up and give me a paizuri! I can't take it!"
+text_ja = "早くパイズリしろ！もう限界なんだ！"
+
+[sub_resource type="Resource" id="line_gate_m01_f9"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "Are you serious?"
+text_ja = "本気なの…？"
+
+[sub_resource type="Resource" id="entry_gate_m01_first"]
+script = ExtResource("2_entry")
+id = "gate_m01_first"
+lines = Array[ExtResource("3_line")]([SubResource("line_gate_m01_f1"), SubResource("line_gate_m01_f2"), SubResource("line_gate_m01_f3"), SubResource("line_gate_m01_f4"), SubResource("line_gate_m01_f5"), SubResource("line_gate_m01_f6"), SubResource("line_gate_m01_f7"), SubResource("line_gate_m01_f8"), SubResource("line_gate_m01_f9")])
+
+[sub_resource type="Resource" id="entry_gate_m01_repeat"]
+script = ExtResource("2_entry")
+id = "gate_m01_repeat"
+lines = Array[ExtResource("3_line")]([SubResource("line_gate_m01_f7"), SubResource("line_gate_m01_f8"), SubResource("line_gate_m01_f9")])
+
+[sub_resource type="Resource" id="line_gate_m01_fb"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "I don't know how to do that..."
+text_ja = "そんなこと…やり方がわからない…"
+
+[sub_resource type="Resource" id="entry_gate_m01_fallback"]
+script = ExtResource("2_entry")
+id = "gate_m01_fallback"
+lines = Array[ExtResource("3_line")]([SubResource("line_gate_m01_fb")])
+
+[sub_resource type="Resource" id="line_gate_fm_f1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "Excuse me—are you trapped here too?"
+text_ja = "すみません…あなたも閉じ込められてるの？"
+
+[sub_resource type="Resource" id="line_gate_fm_f2"]
+script = ExtResource("3_line")
+speaker_en = "Woman"
+speaker_ja = "女"
+show_heroine_portrait = false
+text_en = "...Yes. Trapped... in this heat-addled body."
+text_ja = "…そう。閉じ込められてる…この発情した体に。"
+
+[sub_resource type="Resource" id="line_gate_fm_f3"]
+script = ExtResource("3_line")
+speaker_en = "Woman"
+speaker_ja = "女"
+show_heroine_portrait = false
+text_en = "Something grew down there..."
+text_ja = "下にモノが生えて…"
+
+[sub_resource type="Resource" id="line_gate_fm_f4"]
+script = ExtResource("3_line")
+speaker_en = "Woman"
+speaker_ja = "女"
+show_heroine_portrait = false
+text_en = "It desperately wants to be wrapped. Your lewd chest would be perfect."
+text_ja = "包まれたがってる。お前の淫らな胸がぴったりだわ。"
+
+[sub_resource type="Resource" id="line_gate_fm_f5"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "Why does this keep happening to me..."
+text_ja = "またこんなことに…"
+
+[sub_resource type="Resource" id="line_gate_fm_f6"]
+script = ExtResource("3_line")
+speaker_en = "Woman"
+speaker_ja = "女"
+show_heroine_portrait = false
+text_en = "You can't leave!"
+text_ja = "お前は出られない！"
+
+[sub_resource type="Resource" id="line_gate_fm_f7"]
+script = ExtResource("3_line")
+speaker_en = "Woman"
+speaker_ja = "女"
+show_heroine_portrait = false
+text_en = "I need you to clamp me with those hot, soft breasts. Only then can I be free."
+text_ja = "熱くて柔らかい胸で私を挟んで。それだけが私の解放よ。"
+
+[sub_resource type="Resource" id="entry_gate_fm_first"]
+script = ExtResource("2_entry")
+id = "gate_fm_first"
+lines = Array[ExtResource("3_line")]([SubResource("line_gate_fm_f1"), SubResource("line_gate_fm_f2"), SubResource("line_gate_fm_f3"), SubResource("line_gate_fm_f4"), SubResource("line_gate_fm_f5"), SubResource("line_gate_fm_f6"), SubResource("line_gate_fm_f7")])
+
+[sub_resource type="Resource" id="entry_gate_fm_repeat"]
+script = ExtResource("2_entry")
+id = "gate_fm_repeat"
+lines = Array[ExtResource("3_line")]([SubResource("line_gate_fm_f6"), SubResource("line_gate_fm_f7")])
+
+[sub_resource type="Resource" id="line_gate_fm_fb"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "Impossible... I can't do that."
+text_ja = "無理…そんなことできない。"
+
+[sub_resource type="Resource" id="entry_gate_fm_fallback"]
+script = ExtResource("2_entry")
+id = "gate_fm_fallback"
+lines = Array[ExtResource("3_line")]([SubResource("line_gate_fm_fb")])
+
+[sub_resource type="Resource" id="line_gate_sm_f1"]
+script = ExtResource("3_line")
+speaker_en = "Hunk"
+speaker_ja = "屈強な男"
+show_heroine_portrait = false
+text_en = "I've been waiting. Finally!"
+text_ja = "待っていたぞ。やっとだ！"
+
+[sub_resource type="Resource" id="line_gate_sm_f2"]
+script = ExtResource("3_line")
+speaker_en = "Hunk"
+speaker_ja = "屈強な男"
+show_heroine_portrait = false
+text_en = "The women here aren't enough."
+text_ja = "ここの女じゃ足りない。"
+
+[sub_resource type="Resource" id="line_gate_sm_f3"]
+script = ExtResource("3_line")
+speaker_en = "Hunk"
+speaker_ja = "屈強な男"
+show_heroine_portrait = false
+text_en = "You're the lewdest woman I've seen—those huge breasts were made for me."
+text_ja = "お前は俺が見た中で一番淫らだ。その巨大な乳は俺のために生まれたんだ。"
+
+[sub_resource type="Resource" id="line_gate_sm_f4"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "...Don't tell me you want a paizuri too?"
+text_ja = "…まさか、あなたもパイズリしたいの？"
+
+[sub_resource type="Resource" id="line_gate_sm_f5"]
+script = ExtResource("3_line")
+speaker_en = "Hunk"
+speaker_ja = "屈強な男"
+show_heroine_portrait = false
+text_en = "Of course! I'm ready to blow a huge load all over your breasts."
+text_ja = "当たり前だ！お前の乳に大爆射する準備はできてる。"
+
+[sub_resource type="Resource" id="line_gate_sm_f6"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "So if I give you a paizuri... will you let me through this door?"
+text_ja = "じゃあパイズリしたら、この扉を通してくれるの？"
+
+[sub_resource type="Resource" id="line_gate_sm_f7"]
+script = ExtResource("3_line")
+speaker_en = "Hunk"
+speaker_ja = "屈強な男"
+show_heroine_portrait = false
+text_en = "That depends on how well you perform."
+text_ja = "お前の出来次第だな。"
+
+[sub_resource type="Resource" id="entry_gate_sm_first"]
+script = ExtResource("2_entry")
+id = "gate_sm_first"
+lines = Array[ExtResource("3_line")]([SubResource("line_gate_sm_f1"), SubResource("line_gate_sm_f2"), SubResource("line_gate_sm_f3"), SubResource("line_gate_sm_f4"), SubResource("line_gate_sm_f5"), SubResource("line_gate_sm_f6"), SubResource("line_gate_sm_f7")])
+
+[sub_resource type="Resource" id="entry_gate_sm_repeat"]
+script = ExtResource("2_entry")
+id = "gate_sm_repeat"
+lines = Array[ExtResource("3_line")]([SubResource("line_gate_sm_f6"), SubResource("line_gate_sm_f7")])
+
+[sub_resource type="Resource" id="line_gate_sm_fb1"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "My chest is big, but yours is... also huge."
+text_ja = "私の胸は大きいけど、あなたの…もすごく大きい。"
+
+[sub_resource type="Resource" id="line_gate_sm_fb2"]
+script = ExtResource("3_line")
+speaker_en = "Me"
+speaker_ja = "私"
+show_heroine_portrait = true
+text_en = "I don't know what I'm supposed to do..."
+text_ja = "どうすればいいの…"
+
+[sub_resource type="Resource" id="entry_gate_sm_fallback"]
+script = ExtResource("2_entry")
+id = "gate_sm_fallback"
+lines = Array[ExtResource("3_line")]([SubResource("line_gate_sm_fb1"), SubResource("line_gate_sm_fb2")])
+
+[resource]
+script = ExtResource("1_table")
+story_entries = Array[ExtResource("2_entry")]([SubResource("entry_tut00"), SubResource("entry_tut01"), SubResource("entry_tut02"), SubResource("entry_tut03"), SubResource("entry_tut04"), SubResource("entry_tut05"), SubResource("entry_tut05b"), SubResource("entry_tut05c"), SubResource("entry_tut06"), SubResource("entry_tut07"), SubResource("entry_story"), SubResource("entry_tut_h0"), SubResource("entry_tut_h1"), SubResource("entry_tut_h2"), SubResource("entry_tut_h3"), SubResource("entry_lvl01_gate_before"), SubResource("entry_lvl01_start_door"), SubResource("entry_lvl02_01_bl"), SubResource("entry_lvl02_04_yellow"), SubResource("entry_lvl02_04_gate_before"), SubResource("entry_lvl03_01_l_door"), SubResource("entry_lvl03_05_story1"), SubResource("entry_lvl03_06_story2"), SubResource("entry_lvl03_06_story3"), SubResource("entry_lvl03_07_story1"), SubResource("entry_lvl03_07_story2"), SubResource("entry_lvl03_07_story3")])
+talk_entries = Array[ExtResource("2_entry")]([SubResource("entry_talk"), SubResource("entry_gate_m01_first"), SubResource("entry_gate_m01_repeat"), SubResource("entry_gate_m01_fallback"), SubResource("entry_gate_fm_first"), SubResource("entry_gate_fm_repeat"), SubResource("entry_gate_fm_fallback"), SubResource("entry_gate_sm_first"), SubResource("entry_gate_sm_repeat"), SubResource("entry_gate_sm_fallback")])

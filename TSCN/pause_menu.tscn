@@ -1,0 +1,159 @@
+[gd_scene load_steps=12 format=3 uid="uid://dj0j8nmm6gykg"]
+
+[ext_resource type="Script" uid="uid://beakrn3lmeuib" path="res://GD/pause_menu.gd" id="1_hdmo1"]
+[ext_resource type="PackedScene" uid="uid://bwn6uk6ep3hp5" path="res://TSCN/settings_panel.tscn" id="2_settings"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_avvai"]
+bg_color = Color(0, 0, 0, 0.501961)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.78, 0.42, 1, 0.85)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_hdmo1"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_nwcfo"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_settings"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_05uyy"]
+font_size = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6qp53"]
+bg_color = Color(0, 0, 0, 0.501961)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.78, 0.42, 1, 0.85)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_p81d2"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_2nc7s"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_d3xb4"]
+font_size = 24
+
+[node name="PauseMenu" type="CanvasLayer"]
+script = ExtResource("1_hdmo1")
+main_menu_path = "uid://77jiqi61cvr6"
+selected_color = Color(0.847059, 0.501961, 1, 1)
+
+[node name="PausePanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = -20.0
+offset_right = 96.0
+offset_bottom = 160.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_avvai")
+
+[node name="VBox" type="VBoxContainer" parent="PausePanel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = -55.0
+offset_right = 70.0
+offset_bottom = 55.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Resume" type="Label" parent="PausePanel/VBox"]
+layout_mode = 2
+text = "Resum"
+label_settings = SubResource("LabelSettings_hdmo1")
+horizontal_alignment = 1
+
+[node name="Back" type="Label" parent="PausePanel/VBox"]
+layout_mode = 2
+text = "Back to menu"
+label_settings = SubResource("LabelSettings_nwcfo")
+horizontal_alignment = 1
+
+[node name="Settings" type="Label" parent="PausePanel/VBox"]
+layout_mode = 2
+text = "Settings"
+label_settings = SubResource("LabelSettings_settings")
+horizontal_alignment = 1
+
+[node name="Quit" type="Label" parent="PausePanel/VBox"]
+layout_mode = 2
+text = "Quit game"
+label_settings = SubResource("LabelSettings_05uyy")
+horizontal_alignment = 1
+
+[node name="SettingsPanel" parent="." instance=ExtResource("2_settings")]
+offset_left = -160.0
+offset_top = -204.0
+offset_right = 160.0
+offset_bottom = -36.0
+
+[node name="WarningPanel" type="Panel" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -312.0
+offset_top = -155.0
+offset_right = 313.0
+offset_bottom = -36.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_6qp53")
+
+[node name="VBox" type="VBoxContainer" parent="WarningPanel"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 77.0
+grow_horizontal = 2
+
+[node name="WarningText" type="Label" parent="WarningPanel/VBox"]
+layout_mode = 2
+text = "XXX"
+label_settings = SubResource("LabelSettings_p81d2")
+
+[node name="VBox" type="VBoxContainer" parent="WarningPanel/VBox"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="Yes" type="Label" parent="WarningPanel/VBox/VBox"]
+layout_mode = 2
+text = "Yes"
+label_settings = SubResource("LabelSettings_2nc7s")
+horizontal_alignment = 1
+
+[node name="No" type="Label" parent="WarningPanel/VBox/VBox"]
+layout_mode = 2
+text = "No"
+label_settings = SubResource("LabelSettings_d3xb4")
+horizontal_alignment = 1

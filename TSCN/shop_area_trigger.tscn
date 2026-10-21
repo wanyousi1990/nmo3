@@ -1,0 +1,49 @@
+[gd_scene load_steps=5 format=3 uid="uid://bjvypayponiwa"]
+
+[ext_resource type="Script" uid="uid://bui72vs5a8al2" path="res://GD/shop_area_trigger.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dcfv0dq4486a4" path="res://ART/OTHER/Vending_Machine_game.png" id="2_vend"]
+[ext_resource type="Texture2D" uid="uid://dkiyp2sgcvmd1" path="res://ART/OTHER/light_trapezoid.png" id="3_light"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(104, 130)
+
+[node name="ShopAreaTrigger" type="Area2D"]
+position = Vector2(-1, 0)
+collision_layer = 0
+collision_mask = 65535
+script = ExtResource("1_script")
+trap_softness = 0.25
+flicker_speed = 1.0
+flicker_min_ratio = 0.6
+flicker_max_ratio = 1.1
+flicker_random = 0.2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_vend")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(-12, 3.00001)
+scale = Vector2(0.749081, 0.413603)
+color = Color(0.729685, 0.798745, 1, 1)
+energy = 0.5
+texture = ExtResource("3_light")
+texture_scale = 1.7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 7)
+shape = SubResource("RectangleShape2D_1")
+
+[node name="PromptLabel" type="Label" parent="."]
+z_index = 51
+offset_left = -39.0
+offset_top = -113.0
+offset_right = 41.0
+offset_bottom = -90.0
+theme_override_colors/font_color = Color(0.78, 0.42, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 16
+text = "[ENTER]"
+horizontal_alignment = 1
+vertical_alignment = 1

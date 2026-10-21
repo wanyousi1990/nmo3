@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="PoseConfigResource" load_steps=2 format=3 uid="uid://chungl31ll2qm"]
+
+[ext_resource type="Script" uid="uid://btsubx0t8n03q" path="res://GD/pose_config_resource.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+pose_name = &"TITS_FUCK_02"
+torso_dir = Vector2(0, 45)
+pelvis_dir = Vector2(0, 10)
+b_mult = 1.0
+h_mult = 1.0
+motion_type = "press"
+b_expand = 0.0
+b_rotation_factor = 1.0
+anim = "H_Pose_01_Loop"
+impact_vec = Vector2(10, -40)
+semen_range = Vector2i(3, 5)
+b_press_freq_stages = Array[float]([1.0, 1.6, 2.6])
+b_press_depth = 0.18
+b_press_rebound = 0.2
+b_press_y_follow = 5.0
+b_press_phase_shift = 0.02
+b_press_smooth = 14.0
+b_press_inward_px = 2.0
+b_press_inward_scale = 0.1
+b_press_vertical_stretch = 0.16
+b_press_contact_delay = 0.0
+b_press_attack_ratio = 0.2
+b_press_release_ratio = 0.8

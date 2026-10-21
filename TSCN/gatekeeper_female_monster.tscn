@@ -1,0 +1,27 @@
+[gd_scene load_steps=7 format=3 uid="uid://dr4cnuwm0ue2s"]
+
+[ext_resource type="PackedScene" uid="uid://b0ddmkm760jh8" path="res://TSCN/female_monster.tscn" id="1_base"]
+[ext_resource type="Script" uid="uid://dtm8a4e0a8mo1" path="res://GD/gatekeeper_female_monster.gd" id="2_script"]
+[ext_resource type="Texture2D" uid="uid://dryv2oe7c2k5d" path="res://ART/female_monster/FM_idle_ArmL_normal.png" id="3_arm_l"]
+[ext_resource type="Texture2D" uid="uid://duajd6s7sqqs1" path="res://ART/female_monster/FM_idle_ArmR_normal.png" id="4_arm_r"]
+[ext_resource type="Texture2D" uid="uid://0sip6585dpck" path="res://ART/female_monster/FM_idle_Torso_normal.png" id="5_torso"]
+[ext_resource type="PackedScene" uid="uid://co8btkhwjuji" path="res://TSCN/talk_trigger.tscn" id="6_talk"]
+
+[node name="GatekeeperFemaleMonster" instance=ExtResource("1_base")]
+script = ExtResource("2_script")
+normal_arm_l_texture = ExtResource("3_arm_l")
+normal_arm_r_texture = ExtResource("4_arm_r")
+normal_torso_texture = ExtResource("5_torso")
+awakened_flag_key = "gate_fm_awakened"
+talked_flag_key = "gate_fm_talked"
+dialogue_first_id = "gate_fm_first"
+dialogue_repeat_id = "gate_fm_repeat"
+dialogue_fallback_id = "gate_fm_fallback"
+paizuri_unlock_key = "paizuri_2"
+fixed_h_pose_tag = "TITS_FUCK_02"
+h_pose_tags = Array[String](["TITS_FUCK_02"])
+
+[node name="TalkTrigger" parent="." index="3" instance=ExtResource("6_talk")]
+dialogue_id = ""
+use_host_handler = true
+prompt_offset = Vector2(0, -100)

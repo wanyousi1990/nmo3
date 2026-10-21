@@ -1,0 +1,53 @@
+[gd_scene load_steps=6 format=3 uid="uid://bch3ffrf1beqw"]
+
+[ext_resource type="Script" uid="uid://c138edu31ojna" path="res://GD/Monster03_H_Controllerl.gd" id="1_n117n"]
+[ext_resource type="Texture2D" uid="uid://ikescd7cwlm5" path="res://ART/monster03/monster03-4.png.png" id="2_dawv8"]
+[ext_resource type="Texture2D" uid="uid://bt8wp3puvj287" path="res://ART/monster03/monster03-3.png.png" id="3_17mya"]
+[ext_resource type="Texture2D" uid="uid://c4pqx3warwhde" path="res://ART/monster03/monster03-2.png.png" id="4_pf4t8"]
+[ext_resource type="Texture2D" uid="uid://dassphfsly2yy" path="res://TRES/radial_light_texture.tres" id="5_eyelight"]
+
+[node name="monster_03_h" type="Node2D"]
+
+[node name="M03_H_Visual" type="Node2D" parent="." node_paths=PackedStringArray("torso_node", "thigh_node")]
+script = ExtResource("1_n117n")
+thrust_offset_vec = Vector2(0, -6)
+torso_node = NodePath("Torso")
+torso_inertia = 0.9
+torso_rotation = 0.0
+thigh_node = NodePath("Pelvis/leg")
+thigh_inertia = 1.2
+thigh_rotation = 0.0
+dick_inertia = 0.0
+dick_rotation = 0.0
+
+[node name="Pelvis" type="Node2D" parent="M03_H_Visual"]
+
+[node name="Sprite2D_Pelvis" type="Sprite2D" parent="M03_H_Visual/Pelvis"]
+z_index = 10
+texture = ExtResource("2_dawv8")
+
+[node name="leg" type="Node2D" parent="M03_H_Visual/Pelvis"]
+
+[node name="Sprite2D_leg" type="Sprite2D" parent="M03_H_Visual/Pelvis/leg"]
+z_index = 9
+texture = ExtResource("3_17mya")
+
+[node name="Torso" type="Node2D" parent="M03_H_Visual"]
+
+[node name="Sprite2D_Torso" type="Sprite2D" parent="M03_H_Visual/Torso"]
+z_index = 15
+texture = ExtResource("4_pf4t8")
+
+[node name="EyeLight_L" type="PointLight2D" parent="M03_H_Visual/Torso"]
+position = Vector2(-5, 73)
+color = Color(1, 0.12, 0.1, 1)
+energy = 0.2
+texture = ExtResource("5_eyelight")
+texture_scale = 0.16
+
+[node name="EyeLight_R" type="PointLight2D" parent="M03_H_Visual/Torso"]
+position = Vector2(6, 73)
+color = Color(1, 0.12, 0.1, 1)
+energy = 0.2
+texture = ExtResource("5_eyelight")
+texture_scale = 0.16

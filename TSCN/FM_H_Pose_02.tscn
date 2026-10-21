@@ -1,0 +1,100 @@
+[gd_scene load_steps=9 format=3 uid="uid://bm7d1bxni77j5"]
+
+[ext_resource type="Script" uid="uid://dqt0enra4cug" path="res://GD/FM_H_POSE_02_Controller.gd" id="1_op6sj"]
+[ext_resource type="Texture2D" uid="uid://81wc6lej6fio" path="res://ART/FM_H_POSE2/FM_H_POSE2_01.png" id="3_leg00"]
+[ext_resource type="Texture2D" uid="uid://8fewtbam1gm4" path="res://ART/FM_H_POSE2/FM_H_POSE2_02.png" id="4_dick0"]
+[ext_resource type="Texture2D" uid="uid://duqcnwhj2o67w" path="res://ART/FM_H_POSE2/FM_H_POSE2_03.png" id="5_torso"]
+[ext_resource type="Texture2D" uid="uid://dyrf6mrpm386n" path="res://ART/FM_H_POSE2/FM_H_POSE2_04.png" id="6_brl00"]
+[ext_resource type="Texture2D" uid="uid://dtq5eh0idgukd" path="res://ART/FM_H_POSE2/FM_H_POSE2_05.png" id="7_brr00"]
+[ext_resource type="Texture2D" uid="uid://dphlbqgjtsucm" path="res://ART/FM_H_POSE2/FM_H_POSE2_06.png" id="8_head0"]
+[ext_resource type="Texture2D" uid="uid://dassphfsly2yy" path="res://TRES/radial_light_texture.tres" id="9_eyelight"]
+
+[node name="FM_H_Pose_02" type="Node2D"]
+
+[node name="FM_H_Visual" type="Node2D" parent="." node_paths=PackedStringArray("pelvis_node", "leg_node", "torso_node", "head_node", "dick_node", "breast_l_node", "breast_r_node")]
+script = ExtResource("1_op6sj")
+thrust_offset_vec = Vector2(0, -3)
+pelvis_node = NodePath("Pelvis")
+pelvis_rotation_bend = -12.0
+leg_node = NodePath("Pelvis/Leg")
+torso_node = NodePath("Pelvis/Torso")
+torso_inertia_factor = 0.9
+torso_rotation_bend = 15.0
+head_node = NodePath("Pelvis/Torso/Head")
+head_inertia = 0.0
+head_rotation = 0.0
+dick_node = NodePath("Pelvis/Dick")
+dick_inertia = 0.0
+dick_rotation = 16.0
+breast_l_node = NodePath("Pelvis/Torso/Breast_L")
+breast_r_node = NodePath("Pelvis/Torso/Breast_R")
+breast_damping = 6.0
+breast_impact_vec = Vector2(15, -40)
+breast_ripple_gain = 1.2
+
+[node name="Pelvis" type="Node2D" parent="FM_H_Visual"]
+position = Vector2(7, 66)
+
+[node name="Sprite2D_Pelvis" type="Sprite2D" parent="FM_H_Visual/Pelvis"]
+z_index = 8
+position = Vector2(8, -12)
+texture = ExtResource("8_head0")
+
+[node name="Leg" type="Node2D" parent="FM_H_Visual/Pelvis"]
+
+[node name="Sprite2D_Leg" type="Sprite2D" parent="FM_H_Visual/Pelvis/Leg"]
+z_index = 9
+
+[node name="Dick" type="Node2D" parent="FM_H_Visual/Pelvis"]
+position = Vector2(-7, 1)
+
+[node name="Sprite2D_Dick" type="Sprite2D" parent="FM_H_Visual/Pelvis/Dick"]
+z_index = 10
+position = Vector2(15, -13)
+texture = ExtResource("7_brr00")
+
+[node name="Torso" type="Node2D" parent="FM_H_Visual/Pelvis"]
+position = Vector2(8, 4)
+
+[node name="Sprite2D_Torso" type="Sprite2D" parent="FM_H_Visual/Pelvis/Torso"]
+z_index = 13
+position = Vector2(-1, -16)
+texture = ExtResource("6_brl00")
+
+[node name="Breast_L" type="Node2D" parent="FM_H_Visual/Pelvis/Torso"]
+position = Vector2(-7, 1)
+
+[node name="Sprite2D_Breast_L" type="Sprite2D" parent="FM_H_Visual/Pelvis/Torso/Breast_L"]
+z_index = 15
+position = Vector2(6, -17)
+texture = ExtResource("4_dick0")
+
+[node name="Breast_R" type="Node2D" parent="FM_H_Visual/Pelvis/Torso"]
+position = Vector2(9, -2)
+
+[node name="Sprite2D_Breast_R" type="Sprite2D" parent="FM_H_Visual/Pelvis/Torso/Breast_R"]
+z_index = 14
+position = Vector2(-10, -14)
+texture = ExtResource("5_torso")
+
+[node name="Head" type="Node2D" parent="FM_H_Visual/Pelvis/Torso"]
+position = Vector2(5, 8)
+
+[node name="Sprite2D_Head" type="Sprite2D" parent="FM_H_Visual/Pelvis/Torso/Head"]
+z_index = 16
+position = Vector2(-6, -24)
+texture = ExtResource("3_leg00")
+
+[node name="EyeLight_L" type="PointLight2D" parent="FM_H_Visual/Pelvis/Torso/Head"]
+position = Vector2(5, 2)
+color = Color(1, 0.12, 0.1, 1)
+energy = 0.2
+texture = ExtResource("9_eyelight")
+texture_scale = 0.16
+
+[node name="EyeLight_R" type="PointLight2D" parent="FM_H_Visual/Pelvis/Torso/Head"]
+position = Vector2(12, 0)
+color = Color(1, 0.12, 0.1, 1)
+energy = 0.2
+texture = ExtResource("9_eyelight")
+texture_scale = 0.16

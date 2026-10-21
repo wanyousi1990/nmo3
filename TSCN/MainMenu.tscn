@@ -1,0 +1,184 @@
+[gd_scene load_steps=14 format=3 uid="uid://77jiqi61cvr6"]
+
+[ext_resource type="Script" uid="uid://bc6qgxsaxxk3q" path="res://GD/menu.gd" id="1_lx3mr"]
+[ext_resource type="Texture2D" uid="uid://rsdv5ua5136d" path="res://ART/MENU/遊戲主選單.png" id="2_md1rq"]
+[ext_resource type="PackedScene" uid="uid://dk0prohq30ei3" path="res://TSCN/heroin_menu_visual.tscn" id="3_heroine"]
+[ext_resource type="PackedScene" uid="uid://bwn6uk6ep3hp5" path="res://TSCN/settings_panel.tscn" id="4_settings"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_i26rj"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_eiy7p"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_settings"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_h7a2f"]
+font_size = 24
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_confirm"]
+bg_color = Color(0, 0, 0, 0.5)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.78, 0.42, 1, 0.85)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="LabelSettings" id="LabelSettings_qoqlk"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_7r1g0"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_iwfq2"]
+font_size = 24
+
+[sub_resource type="LabelSettings" id="LabelSettings_cqjrg"]
+font_size = 12
+font_color = Color(1, 1, 1, 0.501961)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_lx3mr")
+color_selected = Color(0.847059, 0.501961, 1, 1)
+color_disabled = Color(0.607843, 0.607843, 0.607843, 1)
+default_start_scene = "res://TSCN/sandbox.tscn"
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_md1rq")
+expand_mode = 2
+
+[node name="HeroinMenuVisual" parent="." instance=ExtResource("3_heroine")]
+layout_mode = 1
+
+[node name="MainMenuContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 161.0
+offset_top = 59.0
+offset_right = 314.0
+offset_bottom = 219.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Continue" type="Label" parent="MainMenuContainer"]
+layout_mode = 2
+text = "Continue"
+label_settings = SubResource("LabelSettings_i26rj")
+horizontal_alignment = 1
+
+[node name="New game" type="Label" parent="MainMenuContainer"]
+layout_mode = 2
+text = "New game"
+label_settings = SubResource("LabelSettings_eiy7p")
+horizontal_alignment = 1
+
+[node name="Settings" type="Label" parent="MainMenuContainer"]
+layout_mode = 2
+text = "Settings"
+label_settings = SubResource("LabelSettings_settings")
+horizontal_alignment = 1
+
+[node name="Quit" type="Label" parent="MainMenuContainer"]
+layout_mode = 2
+text = "Quit"
+label_settings = SubResource("LabelSettings_h7a2f")
+horizontal_alignment = 1
+
+[node name="ConfirmDialog" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 21.0
+offset_top = -117.0
+offset_right = 450.0
+offset_bottom = 53.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_confirm")
+
+[node name="MessageLabel" type="Label" parent="ConfirmDialog"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -1.0
+offset_bottom = 80.0
+grow_horizontal = 2
+text = "XXX"
+label_settings = SubResource("LabelSettings_qoqlk")
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="ButtonContainer" type="VBoxContainer" parent="ConfirmDialog"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -60.0
+offset_top = -72.0
+offset_right = 60.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Confirm" type="Label" parent="ConfirmDialog/ButtonContainer"]
+layout_mode = 2
+text = "Yes"
+label_settings = SubResource("LabelSettings_7r1g0")
+horizontal_alignment = 1
+
+[node name="Cancel" type="Label" parent="ConfirmDialog/ButtonContainer"]
+layout_mode = 2
+text = "No"
+label_settings = SubResource("LabelSettings_iwfq2")
+horizontal_alignment = 1
+
+[node name="SettingsPanel" parent="." instance=ExtResource("4_settings")]
+layout_mode = 1
+offset_left = 76.0
+offset_top = -116.0
+offset_right = 396.0
+offset_bottom = 52.0
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 393.0
+offset_top = 222.0
+offset_right = 489.0
+offset_bottom = 269.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "[Z]  Enter
+[↑↓]】 Move"
+label_settings = SubResource("LabelSettings_cqjrg")

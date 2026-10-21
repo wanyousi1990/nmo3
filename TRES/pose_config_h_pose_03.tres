@@ -1,0 +1,29 @@
+[gd_resource type="Resource" script_class="PoseConfigResource" load_steps=2 format=3 uid="uid://ds5482m8o3wrg"]
+
+[ext_resource type="Script" uid="uid://btsubx0t8n03q" path="res://GD/pose_config_resource.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+pose_name = &"H_Pose_03"
+torso_dir = Vector2(20, -40)
+pelvis_dir = Vector2(10, -60)
+b_mult = 1.0
+h_mult = 1.1
+motion_type = "impact"
+b_expand = -0.4
+b_rotation_factor = 1.0
+anim = "H_Pose_03_Loop"
+impact_vec = Vector2(5, -45)
+semen_range = Vector2i(4, 6)
+b_press_freq_stages = Array[float]([6.0, 9.5, 13.0])
+b_press_depth = 0.09
+b_press_rebound = 0.07
+b_press_y_follow = 5.0
+b_press_phase_shift = 0.4
+b_press_smooth = 14.0
+b_press_inward_px = 2.0
+b_press_inward_scale = 0.08
+b_press_vertical_stretch = 0.12
+b_press_contact_delay = 0.12
+b_press_attack_ratio = 0.35
+b_press_release_ratio = 0.65

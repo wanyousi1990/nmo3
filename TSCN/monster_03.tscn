@@ -1,0 +1,116 @@
+[gd_scene load_steps=13 format=3 uid="uid://jggl618fsb2g"]
+
+[ext_resource type="Script" uid="uid://b112uoljbg2x3" path="res://GD/monster_01.gd" id="1_jxfbm"]
+[ext_resource type="Texture2D" uid="uid://bae5sx4sj1600" path="res://ART/monster03/monster03-7.png.png" id="1_q04ne"]
+[ext_resource type="Texture2D" uid="uid://dq2s5ddy7kppf" path="res://ART/monster01/monster01-17.png.png" id="2_olxoy"]
+[ext_resource type="Texture2D" uid="uid://chvkocs4bwdps" path="res://ART/monster03/monster03-5.png.png" id="3_jxfbm"]
+[ext_resource type="Texture2D" uid="uid://c5km7xgdawuet" path="res://ART/monster01/monster01-16.png.png" id="4_obqxo"]
+[ext_resource type="Shader" uid="uid://br2atdmmpudk3" path="res://mosaic.gdshader" id="5_jxfbm"]
+[ext_resource type="Texture2D" uid="uid://yaqtqtuco7oi" path="res://ART/monster03/monster03-6.png.png" id="5_na84i"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xv4qh"]
+size = Vector2(31, 144)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_obqxo"]
+shader = ExtResource("5_jxfbm")
+shader_parameter/pixel_size = 8.0
+shader_parameter/enabled = true
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hy32w"]
+size = Vector2(42, 144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lso7e"]
+size = Vector2(322, 168)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dcgrh"]
+size = Vector2(118, 272)
+
+[node name="monster03" type="CharacterBody2D" node_paths=PackedStringArray("pelvis_node", "arm_l_node", "arm_r_node", "thigh_l_node", "thigh_r_node", "chase_area", "detection_area")]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_jxfbm")
+h_pose_tags = Array[String](["H_Pose_03"])
+stuck_back_distance = 10.0
+pelvis_node = NodePath("Visaul/Pelvis")
+arm_l_node = NodePath("Visaul/Pelvis/Arm_L")
+arm_r_node = NodePath("Visaul/Pelvis/Arm_R")
+thigh_l_node = NodePath("Visaul/Pelvis/Thigh_L")
+thigh_r_node = NodePath("Visaul/Pelvis/Thigh_R")
+walk_anim_speed = 8.0
+walk_anim_amplitude = 0.18
+chase_area = NodePath("Visaul/Chase_Area2D")
+detection_area = NodePath("Visaul/Detection_Area2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 14)
+shape = SubResource("RectangleShape2D_xv4qh")
+
+[node name="Visaul" type="Node2D" parent="."]
+z_index = 1
+
+[node name="Pelvis" type="Node2D" parent="Visaul"]
+
+[node name="Arm_L" type="Node2D" parent="Visaul/Pelvis"]
+position = Vector2(17, -29)
+
+[node name="Sprite2D_Arm_L" type="Sprite2D" parent="Visaul/Pelvis/Arm_L"]
+position = Vector2(-17, 29)
+texture = ExtResource("1_q04ne")
+
+[node name="Thigh_L" type="Node2D" parent="Visaul/Pelvis"]
+position = Vector2(11, 18)
+
+[node name="Sprite2D_Thigh_L" type="Sprite2D" parent="Visaul/Pelvis/Thigh_L"]
+position = Vector2(-11, -18)
+texture = ExtResource("2_olxoy")
+
+[node name="Sprite2D_Pelvis" type="Sprite2D" parent="Visaul/Pelvis"]
+texture = ExtResource("3_jxfbm")
+
+[node name="ColorRect" type="ColorRect" parent="Visaul/Pelvis/Sprite2D_Pelvis"]
+z_index = 12
+material = SubResource("ShaderMaterial_obqxo")
+offset_left = 5.0
+offset_top = 10.0
+offset_right = 29.0
+offset_bottom = 22.0
+
+[node name="Thigh_R" type="Node2D" parent="Visaul/Pelvis"]
+position = Vector2(-5, 15)
+
+[node name="Sprite2D_Thigh_R" type="Sprite2D" parent="Visaul/Pelvis/Thigh_R"]
+position = Vector2(4, -14)
+texture = ExtResource("4_obqxo")
+
+[node name="Arm_R" type="Node2D" parent="Visaul/Pelvis"]
+position = Vector2(-14, -28)
+
+[node name="Sprite2D_Arm_R" type="Sprite2D" parent="Visaul/Pelvis/Arm_R"]
+position = Vector2(14, 28)
+texture = ExtResource("5_na84i")
+
+[node name="Detection_Area2D" type="Area2D" parent="Visaul"]
+visible = false
+position = Vector2(-4, 0)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Visaul/Detection_Area2D"]
+position = Vector2(7, 14)
+shape = SubResource("RectangleShape2D_hy32w")
+
+[node name="Chase_Area2D" type="Area2D" parent="Visaul"]
+visible = false
+position = Vector2(-4, 0)
+collision_layer = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Visaul/Chase_Area2D"]
+position = Vector2(60, 14)
+shape = SubResource("RectangleShape2D_lso7e")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Visaul/Chase_Area2D"]
+position = Vector2(278, 12)
+shape = SubResource("RectangleShape2D_dcgrh")
+
+[node name="FloorDetector" type="RayCast2D" parent="."]
+position = Vector2(0, 84)
+target_position = Vector2(0, 10)

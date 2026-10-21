@@ -1,0 +1,15 @@
+{
+  "pose_id": "h_pose_01",
+  "scene": "TSCN/character_body_2d.tscn",
+  "pose_root": "Visuals/OL_H_Visual/H_Pose_01",
+  "art_dir": "ART/H_POSE1",
+  "preview_scene": "TOOLS/art_pipeline/_preview/h_pose_01.tscn",
+  "parts": [
+    {
+      "node": "Torso/Sprite2D_Torso_NAKED",
+      "krita_layer": "Torso_Naked",
+      "fill": false,
+      "current_texture": ""
+    }
+  ]
+}

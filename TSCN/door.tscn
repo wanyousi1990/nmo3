@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=3 uid="uid://cipeoj4rcllp7"]
+
+[ext_resource type="Script" uid="uid://bhvak2q771732" path="res://GD/door.gd" id="1_ba8gm"]
+[ext_resource type="Texture2D" uid="uid://cww4h4of5vq23" path="res://ART/OTHER/door_pink_game.png" id="2_door"]
+[ext_resource type="Texture2D" uid="uid://dmookpc328vay" path="res://ART/OTHER/door_pink_mask.png" id="3_mask"]
+[ext_resource type="Texture2D" uid="uid://ouh4g0qmbmwl" path="res://ART/OTHER/Inmon2.png" id="4_ntu58"]
+[ext_resource type="Shader" uid="uid://cfq5qgi36ymgr" path="res://GD/door_energy.gdshader" id="5_shader"]
+[ext_resource type="Texture2D" uid="uid://dassphfsly2yy" path="res://TRES/radial_light_texture.tres" id="6_light"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_energy"]
+shader = ExtResource("5_shader")
+shader_parameter/pattern_tex = ExtResource("4_ntu58")
+shader_parameter/scroll_speed = Vector2(-0.24, 0.24)
+shader_parameter/pattern_density = 5.0
+shader_parameter/motif_size = 3.0
+shader_parameter/pattern_strength = 1.6
+shader_parameter/black_cutoff = 0.5
+shader_parameter/tint = Color(1, 1, 1, 0.501961)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6xrn"]
+size = Vector2(74, 98)
+
+[node name="Door" type="Area2D"]
+collision_layer = 0
+collision_mask = 65535
+monitorable = false
+script = ExtResource("1_ba8gm")
+spawn_offset = Vector2(0, -50)
+energy_scroll_speed = Vector2(-0.24, 0.24)
+energy_density = 5.0
+energy_motif_size = 3.0
+energy_strength = 1.6
+energy_black_cutoff = 0.5
+energy_tint = Color(1, 1, 1, 0.501961)
+flicker_speed = 1.0
+flicker_min_ratio = 0.6
+flicker_max_ratio = 1.1
+flicker_random = 0.0
+prompt_font_size = 16
+
+[node name="DoorSprite" type="Sprite2D" parent="."]
+position = Vector2(0, 13)
+texture = ExtResource("2_door")
+offset = Vector2(0, -112)
+
+[node name="EnergyField" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_energy")
+position = Vector2(0, 13)
+texture = ExtResource("3_mask")
+offset = Vector2(0, -112)
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+position = Vector2(0.499994, -88.5)
+scale = Vector2(2.49687, 1.60938)
+color = Color(1, 0.54902, 0.85098, 1)
+energy = 0.5
+texture = ExtResource("6_light")
+texture_scale = 1.25
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -60)
+shape = SubResource("RectangleShape2D_v6xrn")
+
+[node name="PromptLabel" type="Label" parent="."]
+z_index = 51
+offset_left = -36.0
+offset_top = -234.0
+offset_right = 36.0
+offset_bottom = -211.0
+theme_override_colors/font_color = Color(0.78, 0.42, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 16
+text = "[ENTER]"
+horizontal_alignment = 1
+vertical_alignment = 1

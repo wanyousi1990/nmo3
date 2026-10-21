@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://d1kojt1bs60wp"]
+
+[ext_resource type="Script" uid="uid://cwk71wyihoug0" path="res://GD/art_pipeline_tool.gd" id="1_art"]
+
+[node name="ArtPipelineTool" type="Node"]
+script = ExtResource("1_art")
+target_scene = "uid://d7jtq1lvsgew"
+visual_root = NodePath("視覺根候選/Visuals／Normal_Visual")
+art_folder = "res://ART/NEW_GIRL"
